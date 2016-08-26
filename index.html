@@ -196,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -276,6 +276,84 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-160826-git基础命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/26/160826-git基础命令/" class="article-date">
+      <time datetime="2016-08-26T06:11:46.000Z" itemprop="datePublished">2016-08-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/26/160826-git基础命令/">160826-git基础命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>pwd</strong> 命令用于显示当前目录</p>
+<p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
+<p>现有的仓库   <strong>git remote add origin git@192.168.1.235:iOSTeam/Tornado-iOS.git</strong> 这个要替换项目地址</p>
+<p>用ls -ah命令就可以看见</p>
+<p><strong>ssh-add</strong> ~/.ssh/zhujia360_id_rsa   添加sshKey  不至于每次输入密码</p>
+<p><strong>git add</strong> 文件名字.后缀   git add  . // 所有文件</p>
+<p><strong>git status</strong> 状态</p>
+<p><strong>git commit  -m “xxx”</strong>  提交</p>
+<p><strong>git log</strong>  命令查看</p>
+<p>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
+<p>git diff 查看修改内容</p>
+<p>git reset命令 回退到上一个版本  git reset –hard HEAD^^^^  / HEAD~4</p>
+<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p>
+<p>git reflog用来记录你的每一次命令</p>
+<p>cat readme.txt  打开文件</p>
+<p>git checkout — <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</file></file></p>
+<p>git rm删掉，</p>
+<hr>
+<p><strong>git push origin master</strong> 推到远程master分支</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Xcode插件管理工具-Alcatraz" class="article article-type-post" itemscope itemprop="blogPost">
   
