@@ -8,12 +8,15 @@
       <url>http://yoursite.com/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
-<p>现有的仓库   <strong>git remote add origin git@192.168.1.235:iOSTeam/Tornado-iOS.git</strong> 这个要替换项目地址</p>
-<p>用ls -ah命令就可以看见</p>
+<p>现有的仓库  <strong>git remote add origin git@192.168.1.235:iOSTeam/Tornado-iOS.git</strong> 这个要替换项目地址</p>
 <p><strong>ssh-add</strong> ~/.ssh/zhujia360_id_rsa   添加sshKey  不至于每次输入密码</p>
+<p>用ls -ah命令就可以看见所有文件</p>
 <p><strong>git add</strong> 文件名字.后缀   git add  . // 所有文件</p>
 <p><strong>git status</strong> 状态</p>
-<p><strong>git commit  -m “xxx”</strong>  提交</p>
+<ul>
+<li><a id="more"></a>
+<strong>git commit  -m “xxx”</strong>  提交</li>
+</ul>
 <p><strong>git log</strong>  命令查看</p>
 <p>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
 <p>git diff 查看修改内容</p>
