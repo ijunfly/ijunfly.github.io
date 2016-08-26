@@ -4,12 +4,33 @@
   
     
     <entry>
+      <title><![CDATA[Xcode插件管理工具-Alcatraz]]></title>
+      <url>http://yoursite.com/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/</url>
+      <content type="html"><![CDATA[<h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.</p>
+<p>手动安装Alcatraz,  在GitHub主页上找搜索<a href="https://github.com/alcatraz/Alcatraz" target="_blank" rel="external">Alcatrazde</a> , 或者浏览器地址栏直接输入<a href="https://github.com/alcatraz/Alcatraz" target="_blank" rel="external">https://github.com/alcatraz/Alcatraz</a></p>
+<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176469450.png" alt="0826-1472176469450.png" title="">
+<ul>
+<li><a id="more"></a>
+点击[Clone or download]选择 Download ZIP (如上图)，进行下载。</li>
+</ul>
+<p>下载完，解压ZIP, 双击打开 .xcodeproj 可执行文件，会打开Xcode，之后运行这个项目工程</p>
+<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176649167.png" alt="0826-1472176649167.png" title="">
+<p>运行完，会出现一个会话弹出框，不要慌，这不是出现什么错误了(其实我刚开始看见这个的时候慌了一下)，淡定的点击 Load Bundles</p>
+<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176707103.png" alt="0826-1472176707103.png" title="">
+<p>然后关闭Xcode(或者command ＋ Q), 重新打开Xcode<br>点击Windows可以看到Package Manager(Shift+Command+9)</p>
+<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176837716.png" alt="0826-1472176837716.png" title="">
+<p>此时就可以打开Alcatraz管理工具了</p>
+<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472177132229.png" alt="0826-1472177132229.png" title="">
+<p><a href="http://www.cocoachina.com/ios/20160122/15080.html" target="_blank" rel="external">Xcode 插件优缺点对比（推荐 20 款插件）</a></p>
+<p><a href="http://www.tuicool.com/articles/zUZnAfj" target="_blank" rel="external">工作中的常用插件 for Xcode</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[新的开篇]]></title>
       <url>http://yoursite.com/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/</url>
-      <content type="html"><![CDATA[<p>#暂时的离别是为了再次相聚时的感动</p>
-<hr>
-<p>####离别</p>
-<p>离别的时候<br>每一句话都是那么重<br>缓缓地扣击着我们的心灵<br>窗被敲开了<br>我们诉说着回忆中的快乐<br>回想著一张张可爱的笑脸<br>院子里，操场上<br>充满了甜甜的空气  </p>
+      <content type="html"><![CDATA[<h1 id="暂时的离别是为了再次相聚时的感动"><a href="#暂时的离别是为了再次相聚时的感动" class="headerlink" title="暂时的离别是为了再次相聚时的感动"></a>暂时的离别是为了再次相聚时的感动</h1><hr>
+<h4 id="离别"><a href="#离别" class="headerlink" title="离别"></a>离别</h4><p>离别的时候<br>每一句话都是那么重<br>缓缓地扣击着我们的心灵<br>窗被敲开了<br>我们诉说着回忆中的快乐<br>回想著一张张可爱的笑脸<br>院子里，操场上<br>充满了甜甜的空气  </p>
 <ul>
 <li><a id="more"></a>
 离别的时候<br>每一句话都是那么轻<br>轻轻地说着离别时的感言<br>轻轻的拉着彼此的手<br>轻轻地在耳际说声对不起<br>或永远祝福你  </li>
@@ -17,8 +38,7 @@
 <p>离别的时候<br>每一句话都显得那么悲伤<br>离别时的感动在顷刻间爆发<br>我们，我们，我们<br>独自沉浸在自己的感伤中<br>渐渐的平息……  </p>
 <p>离别的时候<br>每一句话都显得那么珍贵<br>仔细的听著那熟悉的声音<br>把每种都印刻在记忆里  </p>
 <p>望著他们远去的背影，我知道，我们离别了<br>我们带著共同的回忆和永远的祝福<br>各自奔向远方……<br>轻轻哼一首离别的歌～<br>眼里噙满了泪……  </p>
-<p>####重逢</p>
-<p>重逢的时候<br>那是心情的又一次触动<br>惊喜的表情<br>熟悉的面庞<br>回忆中的甜蜜<br>一瞬间在脑海中隐现<br>于是，永远成为了所谓的缘分的代表<br>重逢…惊喜…<br>重逢的时候<br>那是思念的又一次宣泄<br>深情的一个拥抱<br>紧紧的一个握手<br>彼此的心轻鬆了许多<br>才发现思念是一种病<br>重逢…思念……<br>重逢的时候<br>那是记忆的又一次翻新<br>彼此回忆著孩提时的美好<br>诉说着自己的苦恼<br>谈论着朋友的生活<br>讲述着自己无奈的过往<br>重逢…记忆…<br>重逢的时候<br>那是时间的又一次停滞<br>那一刻，时间终于停了<br>自己终于可以放假<br>感动的身体一时瘫在那里<br>重逢时的感动告诉了时光老人<br>时间不能改变的东西……<br>重逢…感动…<br>重逢的时候，那是一阵欣喜，一阵感动<br>欣喜之余还有一丝的忧伤<br>因为我们毕竟还要赶路<br>那么多线终有相交的一点<br>可是相交以后注定还要分别<br>但是，至少我明白<br>暂时的离别是为了再次相聚时的感动……  </p>
+<h4 id="重逢"><a href="#重逢" class="headerlink" title="重逢"></a>重逢</h4><p>重逢的时候<br>那是心情的又一次触动<br>惊喜的表情<br>熟悉的面庞<br>回忆中的甜蜜<br>一瞬间在脑海中隐现<br>于是，永远成为了所谓的缘分的代表<br>重逢…惊喜…<br>重逢的时候<br>那是思念的又一次宣泄<br>深情的一个拥抱<br>紧紧的一个握手<br>彼此的心轻鬆了许多<br>才发现思念是一种病<br>重逢…思念……<br>重逢的时候<br>那是记忆的又一次翻新<br>彼此回忆著孩提时的美好<br>诉说着自己的苦恼<br>谈论着朋友的生活<br>讲述着自己无奈的过往<br>重逢…记忆…<br>重逢的时候<br>那是时间的又一次停滞<br>那一刻，时间终于停了<br>自己终于可以放假<br>感动的身体一时瘫在那里<br>重逢时的感动告诉了时光老人<br>时间不能改变的东西……<br>重逢…感动…<br>重逢的时候，那是一阵欣喜，一阵感动<br>欣喜之余还有一丝的忧伤<br>因为我们毕竟还要赶路<br>那么多线终有相交的一点<br>可是相交以后注定还要分别<br>但是，至少我明白<br>暂时的离别是为了再次相聚时的感动……  </p>
 ]]></content>
     </entry>
     
@@ -26,7 +46,11 @@
       <title><![CDATA[Hello World]]></title>
       <url>http://yoursite.com/2016/08/15/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ul>
+<li><a id="more"></a>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
