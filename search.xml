@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[160826-git基础命令]]></title>
+      <title><![CDATA[git基础命令]]></title>
       <url>http://yoursite.com/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
