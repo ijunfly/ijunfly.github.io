@@ -15,16 +15,22 @@
 
 
 
-<meta name="description" content="不同于昨天的我, 记录生活点滴...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
+每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
+创建一个继承于JFAlertViewController的属性对象1@pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AlertController的Click方法封装">
+<meta property="og:url" content="http://yoursite.com/2016/08/31/160831-AlertController的Click方法封装/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
-<meta property="og:description" content="不同于昨天的我, 记录生活点滴...">
-<meta property="og:updated_time" content="2016-08-15T09:59:07.000Z">
+<meta property="og:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
+每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
+创建一个继承于JFAlertViewController的属性对象1@pro">
+<meta property="og:updated_time" content="2016-08-31T05:47:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="不同于昨天的我, 记录生活点滴...">
+<meta name="twitter:title" content="AlertController的Click方法封装">
+<meta name="twitter:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
+每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
+创建一个继承于JFAlertViewController的属性对象1@pro">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>about | 雾中魔幻糖</title>
+<title>AlertController的Click方法封装 | 雾中魔幻糖</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,7 +72,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -275,11 +281,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-160831-AlertController的Click方法封装" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2016-08-15T08:38:18.000Z" itemprop="datePublished">2016-08-15</time>
+      <a href="/2016/08/31/160831-AlertController的Click方法封装/" class="article-date">
+      <time datetime="2016-08-31T05:23:09.000Z" itemprop="datePublished">2016-08-31</time>
 </a>
 
 
@@ -294,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      AlertController的Click方法封装
     </h1>
   
 
@@ -304,6 +310,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -311,36 +321,74 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">https://github.com/ijunfly/JFAlertViewController</a></p>
+<p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
+<p>创建一个继承于JFAlertViewController的属性对象<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</div></pre></td></tr></table></figure></p>
+<p>初始化时要遵循delegate和dataSource<br><a id="more"></a><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - getting</span></div><div class="line">- (JFAlertViewController *)alertAllVC &#123;</div><div class="line">    <span class="keyword">if</span> (!_alertAllVC) &#123;</div><div class="line">        _alertAllVC = [JFAlertViewController alertControllerWithTitle:<span class="string">@"我是标题"</span> message:<span class="string">@"我是消息, 消息内容的消息..."</span> preferredStyle:<span class="built_in">UIAlertControllerStyleAlert</span>];</div><div class="line">        _alertAllVC.delegate = <span class="keyword">self</span>;</div><div class="line">        _alertAllVC.dataSource = <span class="keyword">self</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> _alertAllVC;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就可以写dataSource和delegate方法了<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回选项的个数 (cancel按钮不计算在内)</span></div><div class="line">- (<span class="built_in">NSUInteger</span>)numberOfIndexsInJFAlertView:(JFAlertViewController *)alertView;</div><div class="line"><span class="comment">//返回选项的title</span></div><div class="line">- (<span class="built_in">NSString</span> *)JFAlertView:(JFAlertViewController *)alertView titleAtIndexNumber:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"><span class="keyword">@optional</span></div><div class="line"><span class="comment">//返回cancel按钮title, 默认是:"取消"</span></div><div class="line">- (<span class="built_in">NSString</span> *)cancelButtonTitleInJFAlertView:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 选项的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertView:(JFAlertViewController *)alertView clickedAtIndex:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"></div><div class="line"><span class="comment">//cancel按钮的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertViewCancel:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure>
+<p>欢迎指正…</p>
+<p>demo改天再传….</p>
 
-
-          
-        
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">JunFly Chang</a></p>
+        <p><span>发布时间:</span>2016-08-31, 13:23:09</p>
+        <p><span>最后更新:</span>2016-08-31, 13:47:00</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/31/160831-AlertController的Click方法封装/" title="AlertController的Click方法封装">http://yoursite.com/2016/08/31/160831-AlertController的Click方法封装/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/08/31/160831-AlertController的Click方法封装/　　作者: JunFly Chang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/08/30/160830-放羊人与砍柴人的故事/">
+                    放羊人与砍柴人的故事
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -358,7 +406,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"about　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"AlertController的Click方法封装　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -373,6 +421,24 @@
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/08/30/160830-放羊人与砍柴人的故事/" title="下一篇: 放羊人与砍柴人的故事">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
 
 
 

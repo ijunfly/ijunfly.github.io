@@ -174,8 +174,6 @@
                         
                             <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
-                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
@@ -187,6 +185,10 @@
                             
                                 <a class="fa GitHub" href="https://github.com/ijunfly" title="GitHub"></a>
                             
+                                <a class="fa Facebook" href="https://www.facebook.com/ijunfly" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" href="https://twitter.com/ijunfly" title="Twitter"></a>
+                            
                                 <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=354008014&site=qq&menu=yes" title="QQ"></a>
                             
                         </ul>
@@ -196,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -253,8 +255,6 @@
                 
                     <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
-                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
@@ -267,6 +267,10 @@
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/ijunfly" title="GitHub"></a>
                             
+                                <a class="fa Facebook" target="_blank" href="https://www.facebook.com/ijunfly" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="https://twitter.com/ijunfly" title="Twitter"></a>
+                            
                                 <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=354008014&site=qq&menu=yes" title="QQ"></a>
                             
                         </ul>
@@ -276,6 +280,73 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-160831-AlertController的Click方法封装" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/31/160831-AlertController的Click方法封装/" class="article-date">
+      <time datetime="2016-08-31T05:23:09.000Z" itemprop="datePublished">2016-08-31</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController">https://github.com/ijunfly/JFAlertViewController</a></p>
+<p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
+<p>创建一个继承于JFAlertViewController的属性对象<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</div></pre></td></tr></table></figure></p>
+<p>初始化时要遵循delegate和dataSource<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/08/31/160831-AlertController的Click方法封装/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-160830-放羊人与砍柴人的故事" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -307,7 +378,7 @@
       
           
               <p>你是砍柴的，他是放羊的，你和他聊了一天，他的羊吃饱了，你的柴呢？ 砍柴的陪不起放羊的——请放弃你的无效社交！</p>
-<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，+
+<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，
           
       
     </div>
@@ -695,6 +766,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

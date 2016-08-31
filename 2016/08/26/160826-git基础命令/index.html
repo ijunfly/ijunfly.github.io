@@ -185,8 +185,6 @@ git add 文件名字.后缀">
                         
                             <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
-                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
@@ -198,6 +196,10 @@ git add 文件名字.后缀">
                             
                                 <a class="fa GitHub" href="https://github.com/ijunfly" title="GitHub"></a>
                             
+                                <a class="fa Facebook" href="https://www.facebook.com/ijunfly" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" href="https://twitter.com/ijunfly" title="Twitter"></a>
+                            
                                 <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=354008014&site=qq&menu=yes" title="QQ"></a>
                             
                         </ul>
@@ -207,7 +209,7 @@ git add 文件名字.后缀">
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -264,8 +266,6 @@ git add 文件名字.后缀">
                 
                     <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
-                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
@@ -277,6 +277,10 @@ git add 文件名字.后缀">
                                 <a class="fa 新浪微博" target="_blank" href="http://weibo.com/ijunfly" title="新浪微博"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/ijunfly" title="GitHub"></a>
+                            
+                                <a class="fa Facebook" target="_blank" href="https://www.facebook.com/ijunfly" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="https://twitter.com/ijunfly" title="Twitter"></a>
                             
                                 <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=354008014&site=qq&menu=yes" title="QQ"></a>
                             
@@ -465,7 +469,7 @@ git add 文件名字.后缀">
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
 
 
 
@@ -556,6 +560,23 @@ git add 文件名字.后缀">
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

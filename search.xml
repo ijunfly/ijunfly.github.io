@@ -4,10 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[AlertController的Click方法封装]]></title>
+      <url>http://yoursite.com/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/</url>
+      <content type="html"><![CDATA[<p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">https://github.com/ijunfly/JFAlertViewController</a></p>
+<p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
+<p>创建一个继承于JFAlertViewController的属性对象<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</div></pre></td></tr></table></figure></p>
+<p>初始化时要遵循delegate和dataSource<br><a id="more"></a><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - getting</span></div><div class="line">- (JFAlertViewController *)alertAllVC &#123;</div><div class="line">    <span class="keyword">if</span> (!_alertAllVC) &#123;</div><div class="line">        _alertAllVC = [JFAlertViewController alertControllerWithTitle:<span class="string">@"我是标题"</span> message:<span class="string">@"我是消息, 消息内容的消息..."</span> preferredStyle:<span class="built_in">UIAlertControllerStyleAlert</span>];</div><div class="line">        _alertAllVC.delegate = <span class="keyword">self</span>;</div><div class="line">        _alertAllVC.dataSource = <span class="keyword">self</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> _alertAllVC;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就可以写dataSource和delegate方法了<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回选项的个数 (cancel按钮不计算在内)</span></div><div class="line">- (<span class="built_in">NSUInteger</span>)numberOfIndexsInJFAlertView:(JFAlertViewController *)alertView;</div><div class="line"><span class="comment">//返回选项的title</span></div><div class="line">- (<span class="built_in">NSString</span> *)JFAlertView:(JFAlertViewController *)alertView titleAtIndexNumber:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"><span class="keyword">@optional</span></div><div class="line"><span class="comment">//返回cancel按钮title, 默认是:"取消"</span></div><div class="line">- (<span class="built_in">NSString</span> *)cancelButtonTitleInJFAlertView:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 选项的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertView:(JFAlertViewController *)alertView clickedAtIndex:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"></div><div class="line"><span class="comment">//cancel按钮的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertViewCancel:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure>
+<p>欢迎指正…</p>
+<p>demo改天再传….</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[放羊人与砍柴人的故事]]></title>
       <url>http://yoursite.com/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/</url>
       <content type="html"><![CDATA[<p>你是砍柴的，他是放羊的，你和他聊了一天，他的羊吃饱了，你的柴呢？ 砍柴的陪不起放羊的——请放弃你的无效社交！</p>
-<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，+ <a id="more"></a>原来羊是这么放的，他学会了砍柴技能，原来柴要这样砍——三人行必有我师，永远保持空杯的状态！</p>
+<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，<a id="more"></a>原来羊是这么放的，他学会了砍柴技能，原来柴要这样砍——三人行必有我师，永远保持空杯的状态！</p>
 <p>你是砍柴的，他是放羊的，你和他聊了一天，他决定把他的羊跟你的柴交换，于是你有了羊，他也有了柴——等价交换，不要看不起任何人，天生我才必有用！</p>
 <p>你是砍柴的，他是放羊的，你和他聊了一天，他把他买羊的客户介绍给了你，你把你买柴的客户介绍给了他，于是你们各自的生意越做越大——资源整合很重要！</p>
 <p>你是砍柴的，他是放羊的，你和他聊了一天，你们决定合作一起开个烤全羊的店，你的柴烤出来的羊很美味，他的羊纯天然的，几年后你们公司上市了——没有完美的个人，只有完美的团队！<br>……</p>
