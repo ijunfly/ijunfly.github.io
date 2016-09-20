@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[更改rootViewController时添加动画]]></title>
+      <url>http://yoursite.com/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/</url>
+      <content type="html"><![CDATA[<p>当需要更换Window的rootViewController时，怎么给这个过程添加动画呢？</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</div><div class="line">                  duration:<span class="number">0.3</span></div><div class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></div><div class="line">                animations:^&#123;</div><div class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</div><div class="line">                &#125;</div><div class="line">                completion:<span class="literal">NULL</span>];</div></pre></td></tr></table></figure>
+<p>这样写咋看咋对, 试试也是对的, 但当横屏时会发现动画很奇怪, 后来在stackoverflow看到一个解决办法</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</div><div class="line">                  duration:<span class="number">0.3</span></div><div class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></div><div class="line">                animations:^&#123;</div><div class="line">                    <span class="built_in">BOOL</span> oldState = [<span class="built_in">UIView</span> areAnimationsEnabled];</div><div class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:<span class="literal">NO</span>];</div><div class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</div><div class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:oldState];</div><div class="line">                &#125;</div><div class="line">                completion:<span class="literal">NULL</span>];</div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[AlertController的Click方法封装]]></title>
       <url>http://yoursite.com/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/</url>
       <content type="html"><![CDATA[<p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">https://github.com/ijunfly/JFAlertViewController</a></p>
@@ -61,7 +70,7 @@
     <entry>
       <title><![CDATA[Xcode插件管理工具-Alcatraz]]></title>
       <url>http://yoursite.com/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/</url>
-      <content type="html"><![CDATA[<h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.</p>
+      <content type="html"><![CDATA[<h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.<br><em>Xcode8中Apple禁止了Xcode安装插件</em></p>
 <p>手动安装Alcatraz,  在GitHub主页上找搜索<a href="https://github.com/alcatraz/Alcatraz" target="_blank" rel="external">Alcatrazde</a> , 或者浏览器地址栏直接输入<a href="https://github.com/alcatraz/Alcatraz" target="_blank" rel="external">https://github.com/alcatraz/Alcatraz</a></p>
 <img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176469450.png" alt="0826-1472176469450.png" title="">
 <ul>
