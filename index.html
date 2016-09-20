@@ -310,10 +310,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>当需要更换Window的rootViewController时，怎么给这个过程添加动画呢？</p>
+              <p>当需要更换Window的rootViewController时，怎么给这个过程添加动画呢？</p>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</div><div class="line">                  duration:<span class="number">0.3</span></div><div class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></div><div class="line">                animations:^&#123;</div><div class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</div><div class="line">                &#125;</div><div class="line">                completion:<span class="literal">NULL</span>];</div></pre></td></tr></table></figure>
-<p>这样写咋看咋对, 试试也是对的, 但当横屏时会发现动画很奇怪, 后来在stackoverflow看到一个解决办法</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</div><div class="line">                  duration:<span class="number">0.3</span></div><div class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></div><div class="line">                animations:^&#123;</div><div class="line">                    <span class="built_in">BOOL</span> oldState = [<span class="built_in">UIView</span> areAnimationsEnabled];</div><div class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:<span class="literal">NO</span>];</div><div class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</div><div class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:oldState];</div><div class="line">                &#125;</div><div class="line">                completion:<span class="literal">NULL</span>];</div></pre></td></tr></table></figure>
+<p>这样写咋看咋对, 试试也是对的,
+          
       
     </div>
     
@@ -326,6 +326,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2016/09/20/160920-更改rootViewController添加动画/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
