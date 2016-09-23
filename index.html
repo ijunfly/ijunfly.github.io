@@ -310,18 +310,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ol>
-<li><p>循环遍历navigationBar的子视图，找到高度小于1的黑线, 在appear是隐藏, disappear时再显示（推荐）</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span> </span>&#123;</div><div class="line">    <span class="built_in">UIImageView</span> *navBarHairlineImageView;</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">	[<span class="keyword">super</span> viewWillAppear:animated];</div><div class="line">    navBarHairlineImageView.hidden = <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)viewWillDisappear:(<span class="built_in">BOOL</span>)animated &#123;</div><div class="line">	[<span class="keyword">super</span> viewWillDisappear:animated];</div><div class="line">    navBarHairlineImageView.hidden = <span class="literal">NO</span>;</div><div class="line">&#125; </div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    navBarHairlineImageView= [<span class="keyword">self</span> findHairlineImageViewUnder:<span class="keyword">self</span>.navigationController.navigationBar];</div><div class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></div><div class="line">&#125;</div><div class="line">- (<span class="built_in">UIImageView</span> *)findHairlineImageViewUnder:(<span class="built_in">UIView</span> *)view &#123;  </div><div class="line">    <span class="keyword">if</span> ([view isKindOfClass:<span class="built_in">UIImageView</span>.class] &amp;&amp; view.bounds.size.height &lt;= <span class="number">1.0</span>) &#123;  </div><div class="line">        <span class="keyword">return</span> (<span class="built_in">UIImageView</span> *)view;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">UIView</span> *subview <span class="keyword">in</span> view.subviews) &#123;  </div><div class="line">        <span class="built_in">UIImageView</span> *imageView = [<span class="keyword">self</span> findHairlineImageViewUnder:subview];  </div><div class="line">        <span class="keyword">if</span> (imageView) &#123;  </div><div class="line">            <span class="keyword">return</span> imageView;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>切去超出部分, 此方法会把状态栏给切掉</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)useClipsToBoundsRemoveBlackLine &#123; <span class="keyword">self</span>.navigationController.navigationBar.clipsToBounds = <span class="literal">YES</span>;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+              <ol>
 <li><p>直接设置navigationBar的shadowImage和backgroundImage,  需先让translucent属性设置为NO</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)removeBlackLine &#123;</div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>];  </div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)removeBlackLine &#123;</div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>]; </div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-</ol>
-
+<li><p>循环遍历navigationBar的子视图，找到高度小于1的黑线, 在appear是隐藏, disappear时再显示（推荐）
+          
       
     </div>
     
@@ -334,6 +328,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
