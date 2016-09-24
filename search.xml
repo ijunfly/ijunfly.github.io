@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title><![CDATA[160924-15分钟学会git]]></title>
+      <url>http://yoursite.com/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/</url>
+      <content type="html"><![CDATA[<ol>
+<li><p>初始化仓库<br> <strong>git init</strong> : 初始化仓库</p>
+</li>
+<li><p>检查状态<br> <strong>git status</strong> : 查看git状态</p>
+</li>
+<li><p>添加并提交<br> <strong>git status</strong> : 查看git状态</p>
+</li>
+<li><p>添加文件到缓存区<br> <strong>git add .</strong> : 把文件添加到缓存区</p>
+</li>
+<li><p>Committing<br> <strong>git commit -m “Add file”</strong> : 提交到缓存区</p>
+</li>
+</ol>
+<ul>
+<li><a id="more"></a></li>
+</ul>
+<ol>
+<li><p>History<br> <strong>git log</strong> : 查看历史</p>
+</li>
+<li><p>远程存储库<br> <strong>git remote add origin <git库地址></git库地址></strong> : 添加到远端git库</p>
+</li>
+<li><p>Pushing Remotely<br> <strong>git push -u origin master</strong> : 把master分支推到远端服务器</p>
+</li>
+<li><p>Pulling Remotely<br><strong>git pull origin master</strong> : 从远端服务器master分支拉取</p>
+</li>
+<li><p>Differences 比较提交<br><strong>git diff HEAD</strong> : 比较工作目录与上次提交时之间的所有差别</p>
+</li>
+<li><p>Staged Differences<br><strong>git diff –staged</strong> </p>
+</li>
+<li><p>Resetting the Stage<br><strong>git reset <file octofamily="" octodog.txt=""></file></strong></p>
+</li>
+<li><p>Undo 撤销<br><strong>git checkout – <file></file></strong> : 撤销文件自从上次提交的所有更改</p>
+</li>
+<li><p>Branching Out 分支<br><strong>git branch clean_up</strong> : 创建名为clean_up的分支</p>
+</li>
+<li><p>Switching Branch 切换分支<br><strong>git checkout clean_up</strong> : 切换到clean_up分支</p>
+</li>
+<li><p>Removing All The Things 删除所有文件<br><strong>git rm ‘<file name="">‘</file></strong> : 删除文件 (有个单引号)</p>
+</li>
+<li><p>Committing Branch Changes  提交分支中的变换<br><strong>git commit -m “Remove all the cats”</strong> : commit</p>
+</li>
+<li><p>Switching Branch 切回 主分支<br><strong>git checkout master</strong> : 回到master主分支</p>
+</li>
+<li><p>Preparing to Merge<br><strong>git merge clean_up</strong> : 当前在master主分支下操作, 把clean_up分支合并到master主分支</p>
+</li>
+<li><p>Delete Branch 为了保持工作区干净 删除用完的分支</p>
+<p><strong>git branch -d clean_up</strong> 删除本地分支  <strong>-D</strong> 是强制删除<br>删除远端 多个push<br><strong>git push origin :serverfix</strong> : <strong>冒号写法</strong> 冒号前面空格不能少, 原理是把一个空分支push到server上，相当于删除该分支<br><strong>git push origin –delete serverfix</strong> –delete写法</p>
+</li>
+<li><p>The Final Push 最后一步 push<br><strong>git push</strong> : 推送到远端服务器</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[隐藏navigationBar底部的黑线shadowImage]]></title>
       <url>http://yoursite.com/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/</url>
       <content type="html"><![CDATA[<ol>
@@ -62,23 +118,17 @@
       <content type="html"><![CDATA[<p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
 <p>现有的仓库  <strong>git remote add origin git@192.168.1.235:iOSTeam/xxx.git</strong> 这个要替换项目地址</p>
-<p><strong>ssh-add</strong> ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
+<p><strong>ssh-add</strong>  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
 <p>用ls -ah命令就可以看见所有文件</p>
 <p><strong>git add</strong> 文件名字.后缀   git add  . // 所有文件</p>
-<p><strong>git status</strong> 状态</p>
-<ul>
-<li><a id="more"></a>
-<strong>git commit  -m “xxx”</strong>  提交</li>
-</ul>
-<p><strong>git log</strong>  命令查看</p>
-<p>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
-<p>git diff 查看修改内容</p>
-<p>git reset命令 回退到上一个版本  git reset –hard HEAD^^^^  / HEAD~4</p>
-<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p>
-<p>git reflog用来记录你的每一次命令</p>
-<p>cat readme.txt  打开文件</p>
-<p>git checkout — <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</file></file></p>
-<p>git rm删掉，</p>
+<p><strong>git status</strong> 状态<br> <a id="more"></a><br><strong>git commit  -m “xxx”</strong>  提交</p>
+<p><strong>git log</strong>  命令查看<br>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
+<p><strong>git diff</strong> 查看修改内容</p>
+<p><strong>git reset</strong> 命令 回退到上一个版本  git reset –hard HEAD^^^^  / HEAD~4<br>还有个方法只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p>
+<p><strong>git reflog</strong> 用来记录你的每一次命令</p>
+<p><strong>cat readme.txt</strong>  打开文件</p>
+<p><strong>git checkout -</strong> <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</file></file></p>
+<p><strong>git rm</strong> 删掉，</p>
 <hr>
 <p><strong>git push origin master</strong> 推到远程master分支</p>
 ]]></content>

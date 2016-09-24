@@ -18,7 +18,7 @@
 <meta name="description" content="pwd 命令用于显示当前目录
 git init命令把这个目录变成Git可以管理的仓库
 现有的仓库  git remote add origin git@192.168.1.235:iOSTeam/xxx.git 这个要替换项目地址
-ssh-add ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
+ssh-add  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
 用ls -ah命令就可以看见所有文件
 git add 文件名字.后缀">
 <meta property="og:type" content="article">
@@ -28,16 +28,16 @@ git add 文件名字.后缀">
 <meta property="og:description" content="pwd 命令用于显示当前目录
 git init命令把这个目录变成Git可以管理的仓库
 现有的仓库  git remote add origin git@192.168.1.235:iOSTeam/xxx.git 这个要替换项目地址
-ssh-add ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
+ssh-add  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
 用ls -ah命令就可以看见所有文件
 git add 文件名字.后缀">
-<meta property="og:updated_time" content="2016-08-27T09:20:39.000Z">
+<meta property="og:updated_time" content="2016-09-24T02:13:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git基础命令">
 <meta name="twitter:description" content="pwd 命令用于显示当前目录
 git init命令把这个目录变成Git可以管理的仓库
 现有的仓库  git remote add origin git@192.168.1.235:iOSTeam/xxx.git 这个要替换项目地址
-ssh-add ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
+ssh-add  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码
 用ls -ah命令就可以看见所有文件
 git add 文件名字.后缀">
 
@@ -333,23 +333,17 @@ git add 文件名字.后缀">
         <p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
 <p>现有的仓库  <strong>git remote add origin git@192.168.1.235:iOSTeam/xxx.git</strong> 这个要替换项目地址</p>
-<p><strong>ssh-add</strong> ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
+<p><strong>ssh-add</strong>  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
 <p>用ls -ah命令就可以看见所有文件</p>
 <p><strong>git add</strong> 文件名字.后缀   git add  . // 所有文件</p>
-<p><strong>git status</strong> 状态</p>
-<ul>
-<li><a id="more"></a>
-<strong>git commit  -m “xxx”</strong>  提交</li>
-</ul>
-<p><strong>git log</strong>  命令查看</p>
-<p>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
-<p>git diff 查看修改内容</p>
-<p>git reset命令 回退到上一个版本  git reset –hard HEAD^^^^  / HEAD~4</p>
-<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p>
-<p>git reflog用来记录你的每一次命令</p>
-<p>cat readme.txt  打开文件</p>
-<p>git checkout — <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</file></file></p>
-<p>git rm删掉，</p>
+<p><strong>git status</strong> 状态<br> <a id="more"></a><br><strong>git commit  -m “xxx”</strong>  提交</p>
+<p><strong>git log</strong>  命令查看<br>git log  –pretty=oneline 参数  显示 commit id（版本号）</p>
+<p><strong>git diff</strong> 查看修改内容</p>
+<p><strong>git reset</strong> 命令 回退到上一个版本  git reset –hard HEAD^^^^  / HEAD~4<br>还有个方法只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p>
+<p><strong>git reflog</strong> 用来记录你的每一次命令</p>
+<p><strong>cat readme.txt</strong>  打开文件</p>
+<p><strong>git checkout -</strong> <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</file></file></p>
+<p><strong>git rm</strong> 删掉，</p>
 <hr>
 <p><strong>git push origin master</strong> 推到远程master分支</p>
 
@@ -363,7 +357,7 @@ git add 文件名字.后缀">
         <p><span>本文标题:</span><a href="/2016/08/26/160826-git基础命令/">git基础命令</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">JunFly Chang</a></p>
         <p><span>发布时间:</span>2016-08-26, 14:11:46</p>
-        <p><span>最后更新:</span>2016-08-27, 17:20:39</p>
+        <p><span>最后更新:</span>2016-09-24, 10:13:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/08/26/160826-git基础命令/" title="git基础命令">http://yoursite.com/2016/08/26/160826-git基础命令/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/08/26/160826-git基础命令/　　作者: JunFly Chang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -469,7 +463,7 @@ git add 文件名字.后缀">
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/160924-15分钟学会git/">160924-15分钟学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
 
 
 
