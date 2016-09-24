@@ -11,8 +11,6 @@
 </li>
 <li><p>检查状态<br> <strong>git status</strong> : 查看git状态</p>
 </li>
-<li><p>添加并提交<br> <strong>git status</strong> : 查看git状态</p>
-</li>
 <li><p>添加文件到缓存区<br> <strong>git add .</strong> : 把文件添加到缓存区</p>
 </li>
 <li><p>Committing<br> <strong>git commit -m “Add file”</strong> : 提交到缓存区</p>
