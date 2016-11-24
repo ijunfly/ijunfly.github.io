@@ -281,6 +281,65 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-161124-判断字符是否是纯数字" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/24/161124-判断字符是否是纯数字/" class="article-date">
+      <time datetime="2016-11-24T01:53:43.000Z" itemprop="datePublished">2016-11-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/24/161124-判断字符是否是纯数字/">161124-判断字符是否是纯数字</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用NSScanner类， </span></div><div class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</div><div class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//[scan scanInt:&amp;val] </span></div><div class="line"><span class="comment">//扫描的Int类型放入val</span></div><div class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></div><div class="line"><span class="comment">//例如：string = @"12ccf12";如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></div><div class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></div><div class="line"><span class="comment">//所以</span></div><div class="line"><span class="comment">//[scan isAtEnd] </span></div><div class="line"> <span class="comment">//判断是否到结尾</span></div><div class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></div><div class="line"><span class="comment">//结果isPureInt 返回YES；</span></div><div class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-160924-15分钟学会git" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -318,10 +377,6 @@
 <li><p>添加文件到缓存区<br> <strong>git add .</strong> : 把文件添加到缓存区</p>
 </li>
 <li><p>Committing<br> <strong>git commit -m “Add file”</strong> : 提交到缓存区</p>
-</li>
-</ol>
-<ul>
-<li>
           
       
     </div>
