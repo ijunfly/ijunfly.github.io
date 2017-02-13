@@ -15,25 +15,28 @@
 
 
 
-<meta name="description" content="##Shadowsocks服务端搭建
-我使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
-下面的命令，需要一行一行的执行，每输入一行命令，回车执行，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。每行命令可以复制后在putty里右键粘贴，回车执行。
-12345$ yum install epel-release$ yum up">
+<meta name="description" content="Shadowsocks服务端搭建
+我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
+使用ssh登录服务器ssh root@45.76.--.-- 输入密码…
+下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..
+12345$ yum install epel-release$ yum update$ yu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务端搭建Shadowsocks">
 <meta property="og:url" content="http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
-<meta property="og:description" content="##Shadowsocks服务端搭建
-我使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
-下面的命令，需要一行一行的执行，每输入一行命令，回车执行，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。每行命令可以复制后在putty里右键粘贴，回车执行。
-12345$ yum install epel-release$ yum up">
-<meta property="og:updated_time" content="2017-02-13T09:31:07.000Z">
+<meta property="og:description" content="Shadowsocks服务端搭建
+我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
+使用ssh登录服务器ssh root@45.76.--.-- 输入密码…
+下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..
+12345$ yum install epel-release$ yum update$ yu">
+<meta property="og:updated_time" content="2017-02-13T09:50:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务端搭建Shadowsocks">
-<meta name="twitter:description" content="##Shadowsocks服务端搭建
-我使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
-下面的命令，需要一行一行的执行，每输入一行命令，回车执行，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。每行命令可以复制后在putty里右键粘贴，回车执行。
-12345$ yum install epel-release$ yum up">
+<meta name="twitter:description" content="Shadowsocks服务端搭建
+我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64
+使用ssh登录服务器ssh root@45.76.--.-- 输入密码…
+下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..
+12345$ yum install epel-release$ yum update$ yu">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -324,41 +327,40 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##Shadowsocks服务端搭建</p>
-<p>我使用的是<a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="external">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="external">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
-<p>下面的命令，需要一行一行的执行，每输入一行命令，回车执行，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。每行命令可以复制后在putty里右键粘贴，回车执行。</p>
+        <p>Shadowsocks服务端搭建</p>
+<p>我服务器使用的是<a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="external">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="external">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
+<p>使用ssh登录服务器<code>ssh root@45.76.--.--</code> 输入密码…</p>
+<p>下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ yum install epel-release</div><div class="line">$ yum update</div><div class="line">$ yum install python-setuptools m2crypto supervisor</div><div class="line">$ easy_install pip</div><div class="line">$ pip install shadowsocks</div></pre></td></tr></table></figure>
-<p>继续执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/shadowsocks.json</div></pre></td></tr></table></figure>
-<p>此时按 i 键进入编辑模式，putty黑框的左下角会出现 – INSERT – 字样，然后一次性复制下面的内容（复制之前记得修改8388和yourpassword为你自己的端口号和密码，此端口号不是你的SSH端口号，而是你在手机或电脑上的shadowsocks客户端连接VPS上搭建的服务端的端口号，范围 1 - 65535 ，只要不和现有的端口号如SSH端口冲突都可以，记下你修改的端口号和密码，待会儿在配置手机和电脑的客户端时还要用到），在putty里右键，此时复制的内容应该已经粘贴到了putty里</p>
-<p>———-以下内容为复制内容———-<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;yourpassword&quot;,</div><div class="line">    &quot;timeout&quot;:600,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</div><div class="line">&#125;</div><div class="line">#或者 多账户配置删除 server_port 和 password 字段, 添加port_password映射集</div><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;port_password&quot;:&#123;</div><div class="line">         &quot;8989&quot;:&quot;password0&quot;,</div><div class="line">         &quot;9001&quot;:&quot;password1&quot;,</div><div class="line">         &quot;9004&quot;:&quot;password4&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>———-以上内容为复制内容———-</p>
-<p>复制完成后，按 Esc 键退出编辑模式，此时putty黑框左下角的 – INSERT – 字样消失，按下 : 键，输入 wq 后回车，此时文件保存完毕并退出了vi编辑器。（“ : ”的输入方法为“Shift+字母L右侧的分号键”）</p>
+<p>继续执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>此时按 i 键进入编辑模式，– INSERT – 字样，然后一次性复制下面的内容（服务器端口号范围1-65535，只要不和现有的端口号如SSH端口冲突都可以, 最好大于1024）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;yourpassword&quot;,</div><div class="line">    &quot;timeout&quot;:600,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</div><div class="line">&#125;</div><div class="line">#或者 多账户配置删除 server_port 和 password 字段, 添加port_password映射集</div><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;port_password&quot;:&#123;</div><div class="line">         &quot;8989&quot;:&quot;password0&quot;,</div><div class="line">         &quot;9001&quot;:&quot;password1&quot;,</div><div class="line">         &quot;9004&quot;:&quot;password4&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>复制完成后，保存完毕并退出vi编辑器。</p>
 <p>继续执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/supervisord.conf</div></pre></td></tr></table></figure></p>
-<p>此时你应该能看到很多英文内容，按 i 键再次进入编辑模式，putty黑框的左下角会出现 – INSERT – 字样，用方向键将光标调整至文件尾部的空行处，然后一次性复制下面的内容，在putty里右键，此时复制的内容应该已经粘贴到了putty里</p>
+<p>此时你应该能看到很多英文内容，再次进入编辑模式，然后一次性复制下面的内容</p>
 <p>———-以下内容为复制内容———-<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[program:shadowsocks]</div><div class="line">command=ssserver -c /etc/shadowsocks.json</div><div class="line">autostart=true</div><div class="line">autorestart=true</div><div class="line">user=root</div><div class="line">log_stderr=true</div><div class="line">logfile=/var/log/shadowsocks.log</div></pre></td></tr></table></figure></p>
 <p>———-以上内容为复制内容———-</p>
-<p>复制完成后，按下回车键给文件尾部留出空行，然后按 Esc 键退出编辑模式，此时putty黑框左下角的 – INSERT – 字样消失，按下 : 键，输入 wq 后回车，此时文件保存完毕并退出了vi编辑器。</p>
+<p>复制完成后，按下回车键给文件尾部留出空行，保存并退出。</p>
 <p>继续执行命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/rc.local</div></pre></td></tr></table></figure>
-<p>此时你应该能看到几行英文内容，按 i 键再次进入编辑模式，putty黑框的左下角会出现 – INSERT – 字样，用方向键将光标调整至文件中部的空行处，然后一次性复制下面的内容，在putty里右键，此时复制的内容应该已经粘贴到了putty里</p>
+<p>此时你应该能看到几行英文内容，用方向键将光标调整至文件中部的空行处，然后一次性复制下面的内容</p>
 <p>———-以下内容为复制内容———-<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ service supervisord start</div></pre></td></tr></table></figure></p>
 <p>———-以上内容为复制内容———-</p>
-<p>复制完成后，按 Esc 键退出编辑模式，此时putty黑框左下角的 – INSERT – 字样消失，按下 : 键，输入 wq 后回车，此时文件保存完毕并退出了vi编辑器。</p>
+<p>复制完成后，保存完毕并退出编辑器。</p>
 <p>最后执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ reboot</div></pre></td></tr></table></figure></p>
-<p>此时，你的VPS重新启动，服务端已经完全配置完毕，putty会弹出一个连接已断开的提示框，关闭即可(不是报错)。</p>
+<p>此时，你的VPS重新启动，服务端已经完全配置完毕，终端会弹出一个连接已断开的提示框，关闭即可(不是报错)。</p>
 <p>①启动Shadowsocks服务端：<code>service supervisord start</code><br>②关闭Shadowsocks服务端：<code>service supervisord stop</code><br>③重启shadowsocks服务端：<code>service supervisord restart</code></p>
 <p>1.执行命令<code>service supervisord start</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/rc.local</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p>
 <p>2.执行命令<code>ssserver -c /etc/shadowsocks.json</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/supervisord.conf</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p>
 <p>3.如果依次进行完以上两步后，手机端依然无法连接，那么问题出在<code>vi /etc/shadowsocks.json</code>环节，请重新检查该文件配置。</p>
-<p>4.如果以上三个文件的配置问题都解决后，执行<code>reboot</code>命令后，手机端依然无法连接，那么说明你在教程最开始的5行命令没有正确执行</p>
+<p>4.如果以上三个文件的配置问题都解决后，执行<code>reboot</code>命令后，手机端依然无法连接，那么查看你在教程最开始的5行命令有没有正确执行?</p>
 <p>5.还有就是 防火墙问题<br>开启防火墙相应的端口<br>python版本的ss支持多端口登录，先看看自己开放的端口有没有被listen<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ iptables -L -n</div></pre></td></tr></table></figure></p>
 <p>如果你所配置的多端口不再这个列表中，重启ss服务再试试！若没有则继续往下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1-安装(有则更新)firewalld  root下执行</div><div class="line">     $ yum install firewalld </div><div class="line">2-开起服务</div><div class="line">    $ service firewalld start</div><div class="line">3-配置新的规则</div><div class="line">    $ cp /usr/lib/firewalld/services/ss.xml</div><div class="line">4-编辑规则 </div><div class="line">    $ vi /usr/lib/firewalld/services/ss.xml</div></pre></td></tr></table></figure>
-<p>粘贴下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;service&gt;</div><div class="line">  &lt;short&gt;SS&lt;/short&gt;</div><div class="line">  &lt;description&gt;Shadowsocks port</div><div class="line">  &lt;/description&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;443&quot;/&gt;</div><div class="line"></div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;1723&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3128&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3288&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3289&quot;/&gt;</div><div class="line"></div><div class="line">&lt;/service&gt;</div></pre></td></tr></table></figure></p>
+<p>粘贴下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;service&gt;</div><div class="line">  &lt;short&gt;SS&lt;/short&gt;</div><div class="line">  &lt;description&gt;Shadowsocks port</div><div class="line">  &lt;/description&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;443&quot;/&gt;</div><div class="line"></div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;1723&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3128&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3288&quot;/&gt;</div><div class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3289&quot;/&gt;</div><div class="line">&lt;/service&gt;</div></pre></td></tr></table></figure></p>
 <p>保存退出。</p>
-<p>开启端口，重启firewalld 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ firewall-cmd --permanent --add-service=ss</div><div class="line">$ firewall-cmd --reload</div></pre></td></tr></table></figure>
+<p>开启端口，重启firewalld 服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ firewall-cmd --permanent --add-service=ss</div><div class="line">$ firewall-cmd --reload</div></pre></td></tr></table></figure></p>
 <p>加入自动启动 <code>$ chkconfig supervisord on</code> 不用每次手动了</p>
 <p>最后再次reboot</p>
 <p>Reference:<br> <a href="https://plus.google.com/103234343779069345365" target="_blank" rel="external">Anonymous V</a>  <a href="http://shadowsocks.blogspot.jp/2015/01/shadowsocks.html" target="_blank" rel="external">【倾力原创】史上最详尽Shadowsocks从零开始一站式翻墙教程</a> </p>
@@ -373,7 +375,7 @@
         <p><span>本文标题:</span><a href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">JunFly Chang</a></p>
         <p><span>发布时间:</span>2017-02-13, 16:58:44</p>
-        <p><span>最后更新:</span>2017-02-13, 17:31:07</p>
+        <p><span>最后更新:</span>2017-02-13, 17:50:46</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/02/13/170213-服务端搭建Shadowsocks/" title="服务端搭建Shadowsocks">http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/　　作者: JunFly Chang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
