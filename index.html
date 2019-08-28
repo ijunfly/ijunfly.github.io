@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,10 +8,10 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="JunFly Chang" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="JunFly Chang">
 
 
     
@@ -24,11 +24,12 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
 <meta property="og:description" content="不同于昨天的我, 记录生活点滴...">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="雾中魔幻糖">
 <meta name="twitter:description" content="不同于昨天的我, 记录生活点滴...">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="雾中魔幻糖" type="application/atom+xml">
@@ -92,7 +93,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -281,6 +282,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/28/go-go-go-2019/" class="article-date">
+      <time datetime="2019-08-28T07:57:35.000Z" itemprop="datePublished">2019-08-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/go-go-go-2019/">go go go 2019</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <pre><code>有点生疏了</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-170213-服务端搭建Shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -311,11 +367,13 @@
       
           
               <p>Shadowsocks服务端搭建</p>
-<p>我服务器使用的是<a href="http://www.vultr.com/?ref=7106338-3B">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
+<p>我服务器使用的是<a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="noopener">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="noopener">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
 <p>使用ssh登录服务器<code>ssh root@45.76.--.--</code> 输入密码…</p>
 <p>下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ yum install epel-release</div><div class="line">$ yum update</div><div class="line">$ yum install python-setuptools m2crypto supervisor</div><div class="line">$ easy_install pip</div><div class="line">$ pip install shadowsocks</div></pre></td></tr></table></figure>
-<p>继续执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yum install epel-release</span><br><span class="line">$ yum update</span><br><span class="line">$ yum install python-setuptools m2crypto supervisor</span><br><span class="line">$ easy_install pip</span><br><span class="line">$ pip install shadowsocks</span><br></pre></td></tr></table></figure>
+
+<p>继续执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
           
       
     </div>
@@ -379,7 +437,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用NSScanner类， </span></div><div class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</div><div class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//[scan scanInt:&amp;val] </span></div><div class="line"><span class="comment">//扫描的Int类型放入val</span></div><div class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></div><div class="line"><span class="comment">//例如：string = @"12ccf12";如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></div><div class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></div><div class="line"><span class="comment">//所以</span></div><div class="line"><span class="comment">//[scan isAtEnd] </span></div><div class="line"> <span class="comment">//判断是否到结尾</span></div><div class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></div><div class="line"><span class="comment">//结果isPureInt 返回YES；</span></div><div class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></div></pre></td></tr></table></figure>
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用NSScanner类， </span></span><br><span class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</span><br><span class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//[scan scanInt:&amp;val] </span></span><br><span class="line"><span class="comment">//扫描的Int类型放入val</span></span><br><span class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></span><br><span class="line"><span class="comment">//例如：string = @"12ccf12";如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></span><br><span class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></span><br><span class="line"><span class="comment">//所以</span></span><br><span class="line"><span class="comment">//[scan isAtEnd] </span></span><br><span class="line"> <span class="comment">//判断是否到结尾</span></span><br><span class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></span><br><span class="line"><span class="comment">//结果isPureInt 返回YES；</span></span><br><span class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -438,7 +496,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <ol>
+              <ol start="0">
 <li><p>初始化仓库<br> <strong>git init</strong> : 初始化仓库</p>
 </li>
 <li><p>检查状态<br> <strong>git status</strong> : 查看git状态</p>
@@ -511,7 +569,7 @@
           
               <ol>
 <li><p>直接设置navigationBar的shadowImage和backgroundImage,  需先让translucent属性设置为NO</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-(<span class="keyword">void</span>)removeBlackLine &#123;</div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>]; </div><div class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="keyword">void</span>)removeBlackLine &#123;</span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>]; </span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>循环遍历navigationBar的子视图，找到高度小于1的黑线, 在appear是隐藏, disappear时再显示（推荐）
           
@@ -578,7 +636,8 @@
       
           
               <p>当需要更换Window的rootViewController时，怎么给这个过程添加动画呢？</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</div><div class="line">                  duration:<span class="number">0.3</span></div><div class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></div><div class="line">                animations:^&#123;</div><div class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</div><div class="line">                &#125;</div><div class="line">                completion:<span class="literal">NULL</span>];</div></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</span><br><span class="line">                  duration:<span class="number">0.3</span></span><br><span class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></span><br><span class="line">                animations:^&#123;</span><br><span class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</span><br><span class="line">                &#125;</span><br><span class="line">                completion:<span class="literal">NULL</span>];</span><br></pre></td></tr></table></figure>
+
 <p>这样写咋看咋对, 试试也是对的,
           
       
@@ -643,10 +702,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController">https://github.com/ijunfly/JFAlertViewController</a></p>
+              <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="noopener">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="noopener">https://github.com/ijunfly/JFAlertViewController</a></p>
 <p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
-<p>创建一个继承于JFAlertViewController的属性对象<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</div></pre></td></tr></table></figure></p>
-<p>初始化时要遵循delegate和dataSource<br>
+<p>创建一个继承于JFAlertViewController的属性对象</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</span><br></pre></td></tr></table></figure>
+
+<p>初始化时要遵循delegate和dataSource</p>
           
       
     </div>
@@ -777,7 +838,7 @@
           
               <p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
-<p>现有的仓库  <strong>git remote add origin git@192.168.1.235:iOSTeam/xxx.git</strong> 这个要替换项目地址</p>
+<p>现有的仓库  <strong>git remote add origin <a href="mailto:git@192.168.1.235" target="_blank" rel="noopener">git@192.168.1.235</a>:iOSTeam/xxx.git</strong> 这个要替换项目地址</p>
 <p><strong>ssh-add</strong>  ~/.ssh/xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
 <p>用ls -ah命令就可以看见所有文件</p>
 <p><strong>git add</strong> 文件名字.后缀   git add  . // 所有文件</p>
@@ -816,11 +877,11 @@
 
 
   
-    <article id="post-Xcode插件管理工具-Alcatraz" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/26/Xcode插件管理工具-Alcatraz/" class="article-date">
-      <time datetime="2016-08-26T02:35:35.000Z" itemprop="datePublished">2016-08-26</time>
+      <a href="/2016/08/26/hello-world/" class="article-date">
+      <time datetime="2016-08-26T02:57:25.000Z" itemprop="datePublished">2016-08-26</time>
 </a>
 
 
@@ -835,7 +896,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a>
+      <a class="article-title" href="/2016/08/26/hello-world/">Hello World</a>
     </h1>
   
 
@@ -845,10 +906,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.<br><em>Xcode8中Apple禁止了Xcode安装插件</em></p>
-<p>手动安装Alcatraz,  在GitHub主页上找搜索<a href="https://github.com/alcatraz/Alcatraz">Alcatrazde</a> , 或者浏览器地址栏直接输入<a href="https://github.com/alcatraz/Alcatraz">https://github.com/alcatraz/Alcatraz</a></p>
-<img src="/2016/08/26/Xcode插件管理工具-Alcatraz/0826-1472176469450.png" alt="0826-1472176469450.png" title="">
-<ul>
+              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ul>
 <li>
           
       
@@ -859,80 +918,9 @@
       
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
-    </div>
-
       
         <p class="article-more-link">
-          <a href="/2016/08/26/Xcode插件管理工具-Alcatraz/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-新的开篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/15/新的开篇/" class="article-date">
-      <time datetime="2016-08-15T06:08:44.000Z" itemprop="datePublished">2016-08-15</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/15/新的开篇/">新的开篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="暂时的离别是为了再次相聚时的感动"><a href="#暂时的离别是为了再次相聚时的感动" class="headerlink" title="暂时的离别是为了再次相聚时的感动"></a>暂时的离别是为了再次相聚时的感动</h1><hr>
-<h4 id="离别"><a href="#离别" class="headerlink" title="离别"></a>离别</h4><p>离别的时候<br>每一句话都是那么重<br>缓缓地扣击着我们的心灵<br>窗被敲开了<br>我们诉说着回忆中的快乐<br>回想著一张张可爱的笑脸<br>院子里，操场上<br>充满了甜甜的空气  </p>
-<ul>
-<li>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/15/新的开篇/#more">阅读全文 >></a>
+          <a href="/2016/08/26/hello-world/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -962,7 +950,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 JunFly Chang
+                2016-2019 JunFly Chang
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>

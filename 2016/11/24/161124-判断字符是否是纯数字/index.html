@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,25 +8,27 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="JunFly Chang" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="JunFly Chang">
 
 
 
 <meta name="description" content="1234567891011121314151617181920212223//使用NSScanner类， [self isPureInt:text]   //传入字符串并调用方法判断- (BOOL)isPureInt:(NSString*)string&amp;#123;    NSScanner* scan = [NSScanner scannerWithString:string]; //定义一个NS">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="161124-判断字符是否是纯数字">
 <meta property="og:url" content="http://yoursite.com/2016/11/24/161124-判断字符是否是纯数字/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
 <meta property="og:description" content="1234567891011121314151617181920212223//使用NSScanner类， [self isPureInt:text]   //传入字符串并调用方法判断- (BOOL)isPureInt:(NSString*)string&amp;#123;    NSScanner* scan = [NSScanner scannerWithString:string]; //定义一个NS">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-24T02:04:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="161124-判断字符是否是纯数字">
 <meta name="twitter:description" content="1234567891011121314151617181920212223//使用NSScanner类， [self isPureInt:text]   //传入字符串并调用方法判断- (BOOL)isPureInt:(NSString*)string&amp;#123;    NSScanner* scan = [NSScanner scannerWithString:string]; //定义一个NS">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="雾中魔幻糖" type="application/atom+xml">
@@ -88,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -315,7 +317,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用NSScanner类， </span></div><div class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</div><div class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//[scan scanInt:&amp;val] </span></div><div class="line"><span class="comment">//扫描的Int类型放入val</span></div><div class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></div><div class="line"><span class="comment">//例如：string = @"12ccf12";如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></div><div class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></div><div class="line"><span class="comment">//所以</span></div><div class="line"><span class="comment">//[scan isAtEnd] </span></div><div class="line"> <span class="comment">//判断是否到结尾</span></div><div class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></div><div class="line"><span class="comment">//结果isPureInt 返回YES；</span></div><div class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></div></pre></td></tr></table></figure>
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用NSScanner类， </span></span><br><span class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</span><br><span class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//[scan scanInt:&amp;val] </span></span><br><span class="line"><span class="comment">//扫描的Int类型放入val</span></span><br><span class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></span><br><span class="line"><span class="comment">//例如：string = @"12ccf12";如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></span><br><span class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></span><br><span class="line"><span class="comment">//所以</span></span><br><span class="line"><span class="comment">//[scan isAtEnd] </span></span><br><span class="line"> <span class="comment">//判断是否到结尾</span></span><br><span class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></span><br><span class="line"><span class="comment">//结果isPureInt 返回YES；</span></span><br><span class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -432,7 +434,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/161124-判断字符是否是纯数字/">161124-判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/160924-15分钟学会git/">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/go-go-go-2019/">go go go 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/161124-判断字符是否是纯数字/">161124-判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/160924-15分钟学会git/">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li></ul>
 
 
 
@@ -446,7 +448,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 JunFly Chang
+                2016-2019 JunFly Chang
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>

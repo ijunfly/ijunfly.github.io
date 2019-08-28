@@ -15,18 +15,17 @@
 
 
 
-<meta name="description" content="Shadowsocks服务端搭建 我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64 使用ssh登录服务器ssh root@45.76.--.-- 输入密码… 下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可.. 12345$ yum install epel-release$ yum update$ yu">
-<meta name="keywords" content="SS,翻墙,科学上网">
+<meta name="description" content="有点生疏了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务端搭建Shadowsocks">
-<meta property="og:url" content="http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/index.html">
+<meta property="og:title" content="go go go 2019">
+<meta property="og:url" content="http://yoursite.com/2019/08/28/go-go-go-2019/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
-<meta property="og:description" content="Shadowsocks服务端搭建 我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64 使用ssh登录服务器ssh root@45.76.--.-- 输入密码… 下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可.. 12345$ yum install epel-release$ yum update$ yu">
+<meta property="og:description" content="有点生疏了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-02-13T09:50:46.000Z">
+<meta property="og:updated_time" content="2019-08-28T07:59:14.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务端搭建Shadowsocks">
-<meta name="twitter:description" content="Shadowsocks服务端搭建 我服务器使用的是Vultr的, 现在购买优惠力度大大的, 点优惠链接服务器系统:CentOS 7 X64 使用ssh登录服务器ssh root@45.76.--.-- 输入密码… 下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可.. 12345$ yum install epel-release$ yum update$ yu">
+<meta name="twitter:title" content="go go go 2019">
+<meta name="twitter:description" content="有点生疏了">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>服务端搭建Shadowsocks | 雾中魔幻糖</title>
+<title>go go go 2019 | 雾中魔幻糖</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +276,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-170213-服务端搭建Shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/13/170213-服务端搭建Shadowsocks/" class="article-date">
-      <time datetime="2017-02-13T08:58:44.000Z" itemprop="datePublished">2017-02-13</time>
+      <a href="/2019/08/28/go-go-go-2019/" class="article-date">
+      <time datetime="2019-08-28T07:57:35.000Z" itemprop="datePublished">2019-08-28</time>
 </a>
 
 
@@ -296,7 +295,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      服务端搭建Shadowsocks
+      go go go 2019
     </h1>
   
 
@@ -306,10 +305,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SS/">SS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/科学上网/">科学上网</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -317,64 +312,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Shadowsocks服务端搭建</p>
-<p>我服务器使用的是<a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="noopener">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B" target="_blank" rel="noopener">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
-<p>使用ssh登录服务器<code>ssh root@45.76.--.--</code> 输入密码…</p>
-<p>下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yum install epel-release</span><br><span class="line">$ yum update</span><br><span class="line">$ yum install python-setuptools m2crypto supervisor</span><br><span class="line">$ easy_install pip</span><br><span class="line">$ pip install shadowsocks</span><br></pre></td></tr></table></figure>
-
-<p>继续执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-<p>此时按 i 键进入编辑模式，– INSERT – 字样，然后一次性复制下面的内容（服务器端口号范围1-65535，只要不和现有的端口号如SSH端口冲突都可以, 最好大于1024）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:8388,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;yourpassword&quot;,</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line">#或者 多账户配置删除 server_port 和 password 字段, 添加port_password映射集</span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>复制完成后，保存完毕并退出vi编辑器。</p>
-<p>继续执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<p>此时你应该能看到很多英文内容，再次进入编辑模式，然后一次性复制下面的内容</p>
-<p>———-以下内容为复制内容———-</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[program:shadowsocks]</span><br><span class="line">command=ssserver -c /etc/shadowsocks.json</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">user=root</span><br><span class="line">log_stderr=true</span><br><span class="line">logfile=/var/log/shadowsocks.log</span><br></pre></td></tr></table></figure>
-
-<p>———-以上内容为复制内容———-</p>
-<p>复制完成后，按下回车键给文件尾部留出空行，保存并退出。</p>
-<p>继续执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/rc.local</span><br></pre></td></tr></table></figure>
-
-<p>此时你应该能看到几行英文内容，用方向键将光标调整至文件中部的空行处，然后一次性复制下面的内容</p>
-<p>———-以下内容为复制内容———-</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service supervisord start</span><br></pre></td></tr></table></figure>
-
-<p>———-以上内容为复制内容———-</p>
-<p>复制完成后，保存完毕并退出编辑器。</p>
-<p>最后执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
-
-<p>此时，你的VPS重新启动，服务端已经完全配置完毕，终端会弹出一个连接已断开的提示框，关闭即可(不是报错)。</p>
-<p>①启动Shadowsocks服务端：<code>service supervisord start</code><br>②关闭Shadowsocks服务端：<code>service supervisord stop</code><br>③重启shadowsocks服务端：<code>service supervisord restart</code></p>
-<p>1.执行命令<code>service supervisord start</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/rc.local</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p>
-<p>2.执行命令<code>ssserver -c /etc/shadowsocks.json</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/supervisord.conf</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p>
-<p>3.如果依次进行完以上两步后，手机端依然无法连接，那么问题出在<code>vi /etc/shadowsocks.json</code>环节，请重新检查该文件配置。</p>
-<p>4.如果以上三个文件的配置问题都解决后，执行<code>reboot</code>命令后，手机端依然无法连接，那么查看你在教程最开始的5行命令有没有正确执行?</p>
-<p>5.还有就是 防火墙问题<br>开启防火墙相应的端口<br>python版本的ss支持多端口登录，先看看自己开放的端口有没有被listen<br>命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ iptables -L -n</span><br></pre></td></tr></table></figure>
-
-<p>如果你所配置的多端口不再这个列表中，重启ss服务再试试！若没有则继续往下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1-安装(有则更新)firewalld  root下执行</span><br><span class="line">     $ yum install firewalld </span><br><span class="line">2-开起服务</span><br><span class="line">    $ service firewalld start</span><br><span class="line">3-配置新的规则</span><br><span class="line">    $ cp /usr/lib/firewalld/services/ss.xml</span><br><span class="line">4-编辑规则 </span><br><span class="line">    $ vi /usr/lib/firewalld/services/ss.xml</span><br></pre></td></tr></table></figure>
-
-<p>粘贴下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;service&gt;</span><br><span class="line">  &lt;short&gt;SS&lt;/short&gt;</span><br><span class="line">  &lt;description&gt;Shadowsocks port</span><br><span class="line">  &lt;/description&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;443&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;1723&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3128&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3288&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3289&quot;/&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure>
-
-<p>保存退出。</p>
-<p>开启端口，重启firewalld 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ firewall-cmd --permanent --add-service=ss</span><br><span class="line">$ firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<p>加入自动启动 <code>$ chkconfig supervisord on</code> 不用每次手动了</p>
-<p>最后再次reboot</p>
-<p>Reference:<br> <a href="https://plus.google.com/103234343779069345365" target="_blank" rel="noopener">Anonymous V</a>  <a href="http://shadowsocks.blogspot.jp/2015/01/shadowsocks.html" target="_blank" rel="noopener">【倾力原创】史上最详尽Shadowsocks从零开始一站式翻墙教程</a> </p>
-
+        <pre><code>有点生疏了</code></pre>
       
     </div>
     
@@ -382,13 +320,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/28/go-go-go-2019/">go go go 2019</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">JunFly Chang</a></p>
-        <p><span>发布时间:</span>2017-02-13, 16:58:44</p>
-        <p><span>最后更新:</span>2017-02-13, 17:50:46</p>
+        <p><span>发布时间:</span>2019-08-28, 15:57:35</p>
+        <p><span>最后更新:</span>2019-08-28, 15:59:14</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/13/170213-服务端搭建Shadowsocks/" title="服务端搭建Shadowsocks">http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/13/170213-服务端搭建Shadowsocks/　　作者: JunFly Chang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/28/go-go-go-2019/" title="go go go 2019">http://yoursite.com/2019/08/28/go-go-go-2019/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/28/go-go-go-2019/　　作者: JunFly Chang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -400,16 +338,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/08/28/go-go-go-2019/">
-                    go go go 2019
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/11/24/161124-判断字符是否是纯数字/">
-                    161124-判断字符是否是纯数字
+                <a href="/2017/02/13/170213-服务端搭建Shadowsocks/">
+                    服务端搭建Shadowsocks
                 </a>
             </div>
         
@@ -457,7 +389,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"服务端搭建Shadowsocks　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"go go go 2019　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -477,15 +409,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/28/go-go-go-2019/" title="上一篇: go go go 2019">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/11/24/161124-判断字符是否是纯数字/" title="下一篇: 161124-判断字符是否是纯数字">
+            <a href="/2017/02/13/170213-服务端搭建Shadowsocks/" title="下一篇: 服务端搭建Shadowsocks">
                 <i class="fa fa-angle-right"></i>
             </a>
         

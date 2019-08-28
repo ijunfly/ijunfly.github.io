@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,31 +8,27 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="JunFly Chang" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="JunFly Chang">
 
 
 
-<meta name="description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
-每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
-创建一个继承于JFAlertViewController的属性对象1@pro">
+<meta name="description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController 每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多 创建一个继承于JFAlertViewController的属性对象 1@pr">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AlertController的Click方法封装">
 <meta property="og:url" content="http://yoursite.com/2016/08/31/160831-AlertController的Click方法封装/index.html">
 <meta property="og:site_name" content="雾中魔幻糖">
-<meta property="og:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
-每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
-创建一个继承于JFAlertViewController的属性对象1@pro">
+<meta property="og:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController 每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多 创建一个继承于JFAlertViewController的属性对象 1@pr">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-08-31T05:47:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AlertController的Click方法封装">
-<meta name="twitter:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController
-每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多
-创建一个继承于JFAlertViewController的属性对象1@pro">
+<meta name="twitter:description" content="封装的AlertController, 不至于每次写alert时 好多Block回调;先上 JFAlertViewController地址 https://github.com/ijunfly/JFAlertViewController 每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多 创建一个继承于JFAlertViewController的属性对象 1@pr">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="雾中魔幻糖" type="application/atom+xml">
@@ -94,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -321,12 +317,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="external">https://github.com/ijunfly/JFAlertViewController</a></p>
+        <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="noopener">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController" target="_blank" rel="noopener">https://github.com/ijunfly/JFAlertViewController</a></p>
 <p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
-<p>创建一个继承于JFAlertViewController的属性对象<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</div></pre></td></tr></table></figure></p>
-<p>初始化时要遵循delegate和dataSource<br><a id="more"></a><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - getting</span></div><div class="line">- (JFAlertViewController *)alertAllVC &#123;</div><div class="line">    <span class="keyword">if</span> (!_alertAllVC) &#123;</div><div class="line">        _alertAllVC = [JFAlertViewController alertControllerWithTitle:<span class="string">@"我是标题"</span> message:<span class="string">@"我是消息, 消息内容的消息..."</span> preferredStyle:<span class="built_in">UIAlertControllerStyleAlert</span>];</div><div class="line">        _alertAllVC.delegate = <span class="keyword">self</span>;</div><div class="line">        _alertAllVC.dataSource = <span class="keyword">self</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> _alertAllVC;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后就可以写dataSource和delegate方法了<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回选项的个数 (cancel按钮不计算在内)</span></div><div class="line">- (<span class="built_in">NSUInteger</span>)numberOfIndexsInJFAlertView:(JFAlertViewController *)alertView;</div><div class="line"><span class="comment">//返回选项的title</span></div><div class="line">- (<span class="built_in">NSString</span> *)JFAlertView:(JFAlertViewController *)alertView titleAtIndexNumber:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"><span class="keyword">@optional</span></div><div class="line"><span class="comment">//返回cancel按钮title, 默认是:"取消"</span></div><div class="line">- (<span class="built_in">NSString</span> *)cancelButtonTitleInJFAlertView:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure></p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 选项的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertView:(JFAlertViewController *)alertView clickedAtIndex:(<span class="built_in">NSUInteger</span>)index;</div><div class="line"></div><div class="line"><span class="comment">//cancel按钮的点击事件</span></div><div class="line">- (<span class="keyword">void</span>)JFAlertViewCancel:(JFAlertViewController *)alertView;</div></pre></td></tr></table></figure>
+<p>创建一个继承于JFAlertViewController的属性对象</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</span><br></pre></td></tr></table></figure>
+
+<p>初始化时要遵循delegate和dataSource</p>
+<a id="more"></a>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - getting</span></span><br><span class="line">- (JFAlertViewController *)alertAllVC &#123;</span><br><span class="line">    <span class="keyword">if</span> (!_alertAllVC) &#123;</span><br><span class="line">        _alertAllVC = [JFAlertViewController alertControllerWithTitle:<span class="string">@"我是标题"</span> message:<span class="string">@"我是消息, 消息内容的消息..."</span> preferredStyle:<span class="built_in">UIAlertControllerStyleAlert</span>];</span><br><span class="line">        _alertAllVC.delegate = <span class="keyword">self</span>;</span><br><span class="line">        _alertAllVC.dataSource = <span class="keyword">self</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _alertAllVC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以写dataSource和delegate方法了</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回选项的个数 (cancel按钮不计算在内)</span></span><br><span class="line">- (<span class="built_in">NSUInteger</span>)numberOfIndexsInJFAlertView:(JFAlertViewController *)alertView;</span><br><span class="line"><span class="comment">//返回选项的title</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)JFAlertView:(JFAlertViewController *)alertView titleAtIndexNumber:(<span class="built_in">NSUInteger</span>)index;</span><br><span class="line"><span class="keyword">@optional</span></span><br><span class="line"><span class="comment">//返回cancel按钮title, 默认是:"取消"</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)cancelButtonTitleInJFAlertView:(JFAlertViewController *)alertView;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 选项的点击事件</span></span><br><span class="line">- (<span class="keyword">void</span>)JFAlertView:(JFAlertViewController *)alertView clickedAtIndex:(<span class="built_in">NSUInteger</span>)index;</span><br><span class="line"></span><br><span class="line"><span class="comment">//cancel按钮的点击事件</span></span><br><span class="line">- (<span class="keyword">void</span>)JFAlertViewCancel:(JFAlertViewController *)alertView;</span><br></pre></td></tr></table></figure>
+
 <p>欢迎指正…</p>
 <p>demo改天再传….</p>
 
@@ -446,7 +450,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/161124-判断字符是否是纯数字/">161124-判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/160924-15分钟学会git/">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/go-go-go-2019/">go go go 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/13/170213-服务端搭建Shadowsocks/">服务端搭建Shadowsocks</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/161124-判断字符是否是纯数字/">161124-判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/160924-15分钟学会git/">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/160920-更改rootViewController添加动画/">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/160831-AlertController的Click方法封装/">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/160830-放羊人与砍柴人的故事/">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/160826-git基础命令/">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/Xcode插件管理工具-Alcatraz/">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/新的开篇/">新的开篇</a></li></ul>
 
 
 
@@ -460,7 +464,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 JunFly Chang
+                2016-2019 JunFly Chang
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
