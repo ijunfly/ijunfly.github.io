@@ -199,7 +199,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SS/">SS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科学上网/">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SS/">SS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事/">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科学上网/">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
                     </div>
                 </section>
                 
@@ -281,6 +281,69 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-190829-MacOS-使用SFMono字体" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/29/190829-MacOS-使用SFMono字体/" class="article-date">
+      <time datetime="2019-08-29T01:23:52.000Z" itemprop="datePublished">2019-08-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/190829-MacOS-使用SFMono字体/">190829 macOS 使用SFMono字体</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="从-macOS-中提取-SF-Mono-字体"><a href="#从-macOS-中提取-SF-Mono-字体" class="headerlink" title="从 macOS 中提取 SF Mono 字体"></a>从 macOS 中提取 SF Mono 字体</h3><h6 id="在-终端-中提取-SF-Mono-字体完整路径为："><a href="#在-终端-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 终端 中提取 SF Mono 字体完整路径为："></a>在 终端 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/</code></p>
+<h6 id="在-Xcode-中提取-SF-Mono-字体完整路径为："><a href="#在-Xcode-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 Xcode 中提取 SF Mono 字体完整路径为："></a>在 Xcode 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts</code></p>
+<h3 id="安装到系统。"><a href="#安装到系统。" class="headerlink" title="安装到系统。"></a>安装到系统。</h3><h6 id="通过-访达-安装"><a href="#通过-访达-安装" class="headerlink" title="通过 访达 安装"></a>通过 访达 安装</h6><p>在访达中通过路径前往文件夹鼠标操作：<code>菜单栏--&gt;前往--&gt;前往文件夹</code>；快捷键操作：<code>⇧+⌘+G</code>。然后输入上面的路径前往，然后全选所有字体文件，双击安装。</p>
+<h6 id="通过-终端-命令行安装"><a href="#通过-终端-命令行安装" class="headerlink" title="通过 终端 命令行安装"></a>通过 终端 命令行安装</h6><p>打开终端，在终端输入此命令<br><code>cp -R /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/</code><br>回车即可</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -859,68 +922,6 @@
       
         <p class="article-more-link">
           <a href="/2016/08/26/160826-git基础命令/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/26/hello-world/" class="article-date">
-      <time datetime="2016-08-26T02:57:25.000Z" itemprop="datePublished">2016-08-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ul>
-<li>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/08/26/hello-world/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>

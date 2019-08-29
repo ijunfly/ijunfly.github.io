@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>190829 macOS 使用SFMono字体</title>
+      <link href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/"/>
+      <url>/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/</url>
+      
+        <content type="html"><![CDATA[<h3 id="从-macOS-中提取-SF-Mono-字体"><a href="#从-macOS-中提取-SF-Mono-字体" class="headerlink" title="从 macOS 中提取 SF Mono 字体"></a>从 macOS 中提取 SF Mono 字体</h3><h6 id="在-终端-中提取-SF-Mono-字体完整路径为："><a href="#在-终端-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 终端 中提取 SF Mono 字体完整路径为："></a>在 终端 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/</code></p><h6 id="在-Xcode-中提取-SF-Mono-字体完整路径为："><a href="#在-Xcode-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 Xcode 中提取 SF Mono 字体完整路径为："></a>在 Xcode 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts</code></p><h3 id="安装到系统。"><a href="#安装到系统。" class="headerlink" title="安装到系统。"></a>安装到系统。</h3><h6 id="通过-访达-安装"><a href="#通过-访达-安装" class="headerlink" title="通过 访达 安装"></a>通过 访达 安装</h6><p>在访达中通过路径前往文件夹鼠标操作：<code>菜单栏--&gt;前往--&gt;前往文件夹</code>；快捷键操作：<code>⇧+⌘+G</code>。然后输入上面的路径前往，然后全选所有字体文件，双击安装。</p><h6 id="通过-终端-命令行安装"><a href="#通过-终端-命令行安装" class="headerlink" title="通过 终端 命令行安装"></a>通过 终端 命令行安装</h6><p>打开终端，在终端输入此命令<br><code>cp -R /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/</code><br>回车即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> macOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>go go go 2019</title>
       <link href="/2019/08/28/go-go-go-2019/"/>
       <url>/2019/08/28/go-go-go-2019/</url>
