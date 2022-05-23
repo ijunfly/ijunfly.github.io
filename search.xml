@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>复习GCD</title>
+      <link href="/2022/05/23/220523-%E5%A4%8D%E4%B9%A0GCD/"/>
+      <url>/2022/05/23/220523-%E5%A4%8D%E4%B9%A0GCD/</url>
+      
+        <content type="html"><![CDATA[<h2 id="队列-FIFO"><a href="#队列-FIFO" class="headerlink" title="队列 FIFO"></a>队列 FIFO</h2><ul><li>串行队列</li><li>并发队列</li><li>全局并发队列</li><li>主队列</li></ul><p>队列只是用来存储任务，没有能力去调度任务</p><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul><li>同步函数 dispatch_sync<ul><li>立即执行、会阻塞当前线程、不具备开辟子线程的能力</li><li>没有线程相关的操作、没有保存任务、立即执行了任务</li></ul></li><li>异步函数 dispatch_async<ul><li>开辟子线程、不会立即执行、不会阻塞当前线程</li><li>保存block、函数式编程、有线程相关的操作</li></ul></li></ul><p>死锁： 在当前线程同步的向串行队列里面添加任务，当前线程锁执行的任务是从当前队列里取出来的</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+            <tag> GCD </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>macOS 使用SFMono字体</title>
+      <link href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/"/>
+      <url>/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/</url>
+      
+        <content type="html"><![CDATA[<h3 id="从-macOS-中提取-SF-Mono-字体"><a href="#从-macOS-中提取-SF-Mono-字体" class="headerlink" title="从 macOS 中提取 SF Mono 字体"></a>从 macOS 中提取 SF Mono 字体</h3><h6 id="在-终端-中提取-SF-Mono-字体完整路径为："><a href="#在-终端-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 终端 中提取 SF Mono 字体完整路径为："></a>在 终端 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/</code></p><h6 id="在-Xcode-中提取-SF-Mono-字体完整路径为："><a href="#在-Xcode-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 Xcode 中提取 SF Mono 字体完整路径为："></a>在 Xcode 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts</code></p><span id="more"></span><h3 id="安装到系统。"><a href="#安装到系统。" class="headerlink" title="安装到系统。"></a>安装到系统。</h3><h6 id="通过-访达-安装"><a href="#通过-访达-安装" class="headerlink" title="通过 访达 安装"></a>通过 访达 安装</h6><p>在访达中通过路径前往文件夹鼠标操作：<code>菜单栏--&gt;前往--&gt;前往文件夹</code>；快捷键操作：<code>⇧+⌘+G</code>。然后输入上面的路径前往，然后全选所有字体文件，双击安装。</p><h6 id="通过-终端-命令行安装"><a href="#通过-终端-命令行安装" class="headerlink" title="通过 终端 命令行安装"></a>通过 终端 命令行安装</h6><p>打开终端，在终端输入此命令<br><code>cp -R /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts/</code><br>回车即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> macOS </tag>
+            
+            <tag> mac </tag>
+            
+            <tag> 字体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go go go 2019</title>
+      <link href="/2019/08/28/go-go-go-2019/"/>
+      <url>/2019/08/28/go-go-go-2019/</url>
+      
+        <content type="html"><![CDATA[<pre><code>有点生疏了</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>服务端搭建Shadowsocks</title>
+      <link href="/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/"/>
+      <url>/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/</url>
+      
+        <content type="html"><![CDATA[<p>Shadowsocks服务端搭建</p><p>我服务器使用的是<a href="http://www.vultr.com/?ref=7106338-3B">Vultr</a>的, 现在购买优惠力度大大的, <a href="http://www.vultr.com/?ref=7106338-3B">点优惠链接</a><br>服务器系统:CentOS 7 X64</p><p>使用ssh登录服务器<code>ssh root@45.76.--.-- </code> 输入密码…</p><p>下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yum install epel-release</span><br><span class="line">$ yum update</span><br><span class="line">$ yum install python-setuptools m2crypto supervisor</span><br><span class="line">$ easy_install pip</span><br><span class="line">$ pip install shadowsocks</span><br></pre></td></tr></table></figure><p>继续执行命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure><span id="more"></span><p>此时按 i 键进入编辑模式，– INSERT – 字样，然后一次性复制下面的内容（服务器端口号范围1-65535，只要不和现有的端口号如SSH端口冲突都可以, 最好大于1024）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:8388,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;yourpassword&quot;,</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br><span class="line">#或者 多账户配置删除 server_port 和 password 字段, 添加port_password映射集</span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>复制完成后，保存完毕并退出vi编辑器。</p><p>继续执行命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/supervisord.conf</span><br></pre></td></tr></table></figure><p>此时你应该能看到很多英文内容，再次进入编辑模式，然后一次性复制下面的内容</p><p>———-以下内容为复制内容———-</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[program:shadowsocks]</span><br><span class="line">command=ssserver -c /etc/shadowsocks.json</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">user=root</span><br><span class="line">log_stderr=true</span><br><span class="line">logfile=/var/log/shadowsocks.log</span><br></pre></td></tr></table></figure><p>———-以上内容为复制内容———-</p><p>复制完成后，按下回车键给文件尾部留出空行，保存并退出。</p><p>继续执行命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/rc.local</span><br></pre></td></tr></table></figure><p>此时你应该能看到几行英文内容，用方向键将光标调整至文件中部的空行处，然后一次性复制下面的内容</p><p>———-以下内容为复制内容———-</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service supervisord start</span><br></pre></td></tr></table></figure><p>———-以上内容为复制内容———-</p><p>复制完成后，保存完毕并退出编辑器。</p><p>最后执行命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ reboot</span><br></pre></td></tr></table></figure><p>此时，你的VPS重新启动，服务端已经完全配置完毕，终端会弹出一个连接已断开的提示框，关闭即可(不是报错)。</p><p>①启动Shadowsocks服务端：<code>service supervisord start</code><br>②关闭Shadowsocks服务端：<code>service supervisord stop</code><br>③重启shadowsocks服务端：<code>service supervisord restart</code></p><p>1.执行命令<code>service supervisord start</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/rc.local</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p><p>2.执行命令<code>ssserver -c /etc/shadowsocks.json</code>，执行完毕后如果没有报错，手机端也可以正常连接，那么问题出在<code>vi /etc/supervisord.conf</code>这个环节，请重新检查该文件配置；如果手机端依然无法连接，请继续往下看。</p><p>3.如果依次进行完以上两步后，手机端依然无法连接，那么问题出在<code>vi /etc/shadowsocks.json</code>环节，请重新检查该文件配置。</p><p>4.如果以上三个文件的配置问题都解决后，执行<code>reboot</code>命令后，手机端依然无法连接，那么查看你在教程最开始的5行命令有没有正确执行?</p><p>5.还有就是 防火墙问题<br>开启防火墙相应的端口<br>python版本的ss支持多端口登录，先看看自己开放的端口有没有被listen<br>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ iptables -L -n</span><br></pre></td></tr></table></figure><p>如果你所配置的多端口不再这个列表中，重启ss服务再试试！若没有则继续往下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1-安装(有则更新)firewalld  root下执行</span><br><span class="line">     $ yum install firewalld </span><br><span class="line">2-开起服务</span><br><span class="line">    $ service firewalld start</span><br><span class="line">3-配置新的规则</span><br><span class="line">    $ cp /usr/lib/firewalld/services/ss.xml</span><br><span class="line">4-编辑规则 </span><br><span class="line">    $ vi /usr/lib/firewalld/services/ss.xml</span><br></pre></td></tr></table></figure><p>粘贴下面的代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;service&gt;</span><br><span class="line">  &lt;short&gt;SS&lt;/short&gt;</span><br><span class="line">  &lt;description&gt;Shadowsocks port</span><br><span class="line">  &lt;/description&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;443&quot;/&gt;</span><br><span class="line"></span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;1723&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3128&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3288&quot;/&gt;</span><br><span class="line">  &lt;port protocol=&quot;tcp&quot; port=&quot;3289&quot;/&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure><p>保存退出。</p><p>开启端口，重启firewalld 服务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ firewall-cmd --permanent --add-service=ss</span><br><span class="line">$ firewall-cmd --reload</span><br></pre></td></tr></table></figure><p>加入自动启动 <code>$ chkconfig supervisord on</code> 不用每次手动了</p><p>最后再次reboot</p><p>Reference:<br> <a href="https://plus.google.com/103234343779069345365">Anonymous V</a>  <a href="http://shadowsocks.blogspot.jp/2015/01/shadowsocks.html">【倾力原创】史上最详尽Shadowsocks从零开始一站式翻墙教程</a> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 翻墙 </tag>
+            
+            <tag> 科学上网 </tag>
+            
+            <tag> 酸酸乳 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>判断字符是否是纯数字</title>
+      <link href="/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/"/>
+      <url>/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用NSScanner类， </span></span><br><span class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</span><br><span class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><span id="more"></span><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 同理 可以检测float double 等等格式</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//[scan scanInt:&amp;val] </span></span><br><span class="line"><span class="comment">//扫描的Int类型放入val</span></span><br><span class="line"><span class="comment">//根据NSScanner的机制，如果扫描到结果需要的数据，那么它就会停在数据结尾的下一个字符处</span></span><br><span class="line"><span class="comment">//例如：string = @&quot;12ccf12&quot;;如果扫描Int类型，那么第一次扫描到第二个字符处就停止了，如果要扫描全部需要进行循环判断</span></span><br><span class="line"><span class="comment">//扫描结束后，没有到string的结尾，那么[scan isAtEnd]为NO</span></span><br><span class="line"><span class="comment">//所以</span></span><br><span class="line"><span class="comment">//[scan isAtEnd] </span></span><br><span class="line"> <span class="comment">//判断是否到结尾</span></span><br><span class="line"><span class="comment">//这样就能保证一遍扫描到结尾的数据全部是int,[scan scanInt:&amp;val] 和[scan isAtEnd]都为YES；</span></span><br><span class="line"><span class="comment">//结果isPureInt 返回YES；</span></span><br><span class="line"><span class="comment">//类似其他的判断也可以参考NSScanner</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>15分钟快速学会git</title>
+      <link href="/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/"/>
+      <url>/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/</url>
+      
+        <content type="html"><![CDATA[<ol start="0"><li><p>初始化仓库<br> <strong>git init</strong> : 初始化仓库</p></li><li><p>检查状态<br> <strong>git status</strong> : 查看git状态</p></li><li><p>添加文件到缓存区<br> <strong>git add .</strong> : 把文件添加到缓存区</p></li><li><p>Committing<br> <strong>git commit -m “Add file”</strong> : 提交到缓存区</p><span id="more"></span></li><li><p>History<br> <strong>git log</strong> : 查看历史</p></li><li><p>远程存储库<br> <strong>git remote add origin &lt;git库地址&gt;</strong> : 添加到远端git库</p></li><li><p>Pushing Remotely<br> <strong>git push -u origin master</strong> : 把master分支推到远端服务器</p></li><li><p>Pulling Remotely<br><strong>git pull origin master</strong> : 从远端服务器master分支拉取</p></li><li><p>Differences 比较提交<br><strong>git diff HEAD</strong> : 比较工作目录与上次提交时之间的所有差别</p></li><li><p>Staged Differences<br><strong>git diff –staged</strong> </p></li><li><p>Resetting the Stage<br><strong>git reset &lt;file octofamily&#x2F;octodog.txt&gt;</strong></p></li><li><p>Undo 撤销<br><strong>git checkout – <file></strong> : 撤销文件自从上次提交的所有更改</p></li><li><p>Branching Out 分支<br><strong>git branch clean_up</strong> : 创建名为clean_up的分支</p></li><li><p>Switching Branch 切换分支<br><strong>git checkout clean_up</strong> : 切换到clean_up分支</p></li><li><p>Removing All The Things 删除所有文件<br><strong>git rm ‘<file name>‘</strong> : 删除文件 (有个单引号)</p></li><li><p>Committing Branch Changes  提交分支中的变换<br><strong>git commit -m “Remove all the cats”</strong> : commit</p></li><li><p>Switching Branch 切回 主分支<br><strong>git checkout master</strong> : 回到master主分支</p></li><li><p>Preparing to Merge<br><strong>git merge clean_up</strong> : 当前在master主分支下操作, 把clean_up分支合并到master主分支</p></li><li><p>Delete Branch 为了保持工作区干净 删除用完的分支</p><p><strong>git branch -d clean_up</strong> 删除本地分支  <strong>-D</strong> 是强制删除<br>删除远端 多个push<br><strong>git push origin :serverfix</strong> : <strong>冒号写法</strong> 冒号前面空格不能少, 原理是把一个空分支push到server上，相当于删除该分支<br><strong>git push origin –delete serverfix</strong> –delete写法</p></li><li><p>The Final Push 最后一步 push<br><strong>git push</strong> : 推送到远端服务器</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>隐藏navigationBar底部的黑线shadowImage</title>
+      <link href="/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/"/>
+      <url>/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>直接设置navigationBar的shadowImage和backgroundImage,  需先让translucent属性设置为NO</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="type">void</span>)removeBlackLine &#123;</span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>]; </span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>循环遍历navigationBar的子视图，找到高度小于1的黑线, 在appear是隐藏, disappear时再显示（推荐）<span id="more"></span></p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span> </span>&#123;</span><br><span class="line">    <span class="built_in">UIImageView</span> *navBarHairlineImageView;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="type">void</span>)viewWillAppear:(<span class="type">BOOL</span>)animated &#123;</span><br><span class="line">[<span class="variable language_">super</span> viewWillAppear:animated];</span><br><span class="line">    navBarHairlineImageView.hidden = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="type">void</span>)viewWillDisappear:(<span class="type">BOOL</span>)animated &#123;</span><br><span class="line">[<span class="variable language_">super</span> viewWillDisappear:animated];</span><br><span class="line">    navBarHairlineImageView.hidden = <span class="literal">NO</span>;</span><br><span class="line">&#125; </span><br><span class="line">- (<span class="type">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="variable language_">super</span> viewDidLoad];</span><br><span class="line">    navBarHairlineImageView= [<span class="keyword">self</span> findHairlineImageViewUnder:<span class="keyword">self</span>.navigationController.navigationBar];</span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">UIImageView</span> *)findHairlineImageViewUnder:(<span class="built_in">UIView</span> *)view &#123;  </span><br><span class="line">    <span class="keyword">if</span> ([view isKindOfClass:<span class="built_in">UIImageView</span>.class] &amp;&amp; view.bounds.size.height &lt;= <span class="number">1.0</span>) &#123;  </span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">UIImageView</span> *)view;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UIView</span> *subview <span class="keyword">in</span> view.subviews) &#123;  </span><br><span class="line">        <span class="built_in">UIImageView</span> *imageView = [<span class="keyword">self</span> findHairlineImageViewUnder:subview];  </span><br><span class="line">        <span class="keyword">if</span> (imageView) &#123;  </span><br><span class="line">            <span class="keyword">return</span> imageView;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure></li><li><p>切去超出部分, 此方法会把状态栏给切掉</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="type">void</span>)useClipsToBoundsRemoveBlackLine &#123; <span class="keyword">self</span>.navigationController.navigationBar.clipsToBounds = <span class="literal">YES</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>更改rootViewController时添加动画</title>
+      <link href="/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/"/>
+      <url>/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/</url>
+      
+        <content type="html"><![CDATA[<p>当需要更换Window的rootViewController时，怎么给这个过程添加动画呢？</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</span><br><span class="line">                  duration:<span class="number">0.3</span></span><br><span class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></span><br><span class="line">                animations:^&#123;</span><br><span class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</span><br><span class="line">                &#125;</span><br><span class="line">                completion:<span class="literal">NULL</span>];</span><br></pre></td></tr></table></figure><p>这样写咋看咋对, 试试也是对的, <span id="more"></span> 但当横屏时会发现动画很奇怪, 后来在stackoverflow看到一个解决办法</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> transitionWithView:[[<span class="built_in">UIApplication</span> sharedApplication].delegate window]</span><br><span class="line">                  duration:<span class="number">0.3</span></span><br><span class="line">                   options:<span class="built_in">UIViewAnimationOptionTransitionCrossDissolve</span></span><br><span class="line">                animations:^&#123;</span><br><span class="line">                    <span class="type">BOOL</span> oldState = [<span class="built_in">UIView</span> areAnimationsEnabled];</span><br><span class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:<span class="literal">NO</span>];</span><br><span class="line">                    [[[<span class="built_in">UIApplication</span> sharedApplication].delegate window] setRootViewController:viewController];</span><br><span class="line">                    [<span class="built_in">UIView</span> setAnimationsEnabled:oldState];</span><br><span class="line">                &#125;</span><br><span class="line">                completion:<span class="literal">NULL</span>];</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AlertController的Click方法封装</title>
+      <link href="/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/"/>
+      <url>/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a href="https://github.com/ijunfly/JFAlertViewController">JFAlertViewController</a>地址 <a href="https://github.com/ijunfly/JFAlertViewController">https://github.com/ijunfly/JFAlertViewController</a></p><p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p><p>创建一个继承于JFAlertViewController的属性对象</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</span><br></pre></td></tr></table></figure><p>初始化时要遵循delegate和dataSource</p><span id="more"></span><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> mark - getting</span></span><br><span class="line">- (JFAlertViewController *)alertAllVC &#123;</span><br><span class="line">    <span class="keyword">if</span> (!_alertAllVC) &#123;</span><br><span class="line">        _alertAllVC = [JFAlertViewController alertControllerWithTitle:<span class="string">@&quot;我是标题&quot;</span> message:<span class="string">@&quot;我是消息, 消息内容的消息...&quot;</span> preferredStyle:<span class="built_in">UIAlertControllerStyleAlert</span>];</span><br><span class="line">        _alertAllVC.delegate = <span class="keyword">self</span>;</span><br><span class="line">        _alertAllVC.dataSource = <span class="keyword">self</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _alertAllVC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后就可以写dataSource和delegate方法了</p><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回选项的个数 (cancel按钮不计算在内)</span></span><br><span class="line">- (<span class="built_in">NSUInteger</span>)numberOfIndexsInJFAlertView:(JFAlertViewController *)alertView;</span><br><span class="line"><span class="comment">//返回选项的title</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)JFAlertView:(JFAlertViewController *)alertView titleAtIndexNumber:(<span class="built_in">NSUInteger</span>)index;</span><br><span class="line"><span class="keyword">@optional</span></span><br><span class="line"><span class="comment">//返回cancel按钮title, 默认是:&quot;取消&quot;</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)cancelButtonTitleInJFAlertView:(JFAlertViewController *)alertView;</span><br></pre></td></tr></table></figure><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 选项的点击事件</span></span><br><span class="line">- (<span class="type">void</span>)JFAlertView:(JFAlertViewController *)alertView clickedAtIndex:(<span class="built_in">NSUInteger</span>)index;</span><br><span class="line"></span><br><span class="line"><span class="comment">//cancel按钮的点击事件</span></span><br><span class="line">- (<span class="type">void</span>)JFAlertViewCancel:(JFAlertViewController *)alertView;</span><br></pre></td></tr></table></figure><p>欢迎指正…</p><p>demo改天再传….</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>放羊人与砍柴人的故事</title>
+      <link href="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/"/>
+      <url>/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>你是砍柴的，他是放羊的，你和他聊了一天，他的羊吃饱了，你的柴呢？ 砍柴的陪不起放羊的——请放弃你的无效社交！</p><p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，<span id="more"></span>原来羊是这么放的，他学会了砍柴技能，原来柴要这样砍——三人行必有我师，永远保持空杯的状态！</p><p>你是砍柴的，他是放羊的，你和他聊了一天，他决定把他的羊跟你的柴交换，于是你有了羊，他也有了柴——等价交换，不要看不起任何人，天生我才必有用！</p><p>你是砍柴的，他是放羊的，你和他聊了一天，他把他买羊的客户介绍给了你，你把你买柴的客户介绍给了他，于是你们各自的生意越做越大——资源整合很重要！</p><p>你是砍柴的，他是放羊的，你和他聊了一天，你们决定合作一起开个烤全羊的店，你的柴烤出来的羊很美味，他的羊纯天然的，几年后你们公司上市了——没有完美的个人，只有完美的团队！<br>……</p><p>其实面对同一件事物 心态不一样 结果就会不一样！我想说，聊可以瞎聊，沟通却是有目的的。</p><img src="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/160830-fangyangren.jpg" class="">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 故事 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git基础命令</title>
+      <link href="/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+      <url>/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p><strong>pwd</strong> 命令用于显示当前目录</p><p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p><p>现有的仓库  <strong>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#46;&#x32;&#51;&#53;">&#x67;&#105;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#46;&#x32;&#51;&#53;</a>:iOSTeam&#x2F;xxx.git</strong> 这个要替换项目地址</p><p><strong>ssh-add</strong>  ~&#x2F;.ssh&#x2F;xxx_id_rsa   添加sshKey  不至于每次输入密码</p><p>用ls -ah命令就可以看见所有文件</p><p><strong>git add</strong> 文件名字.后缀   git add  . &#x2F;&#x2F; 所有文件</p><p><strong>git status</strong> 状态<br> <span id="more"></span><br><strong>git commit  -m “xxx”</strong>  提交</p><p><strong>git log</strong>  命令查看<br>git log  –pretty&#x3D;oneline 参数  显示 commit id（版本号）</p><p><strong>git diff</strong> 查看修改内容</p><p><strong>git reset</strong> 命令 回退到上一个版本  git reset –hard HEAD^^^^  &#x2F; HEAD~4<br>还有个方法只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是3628164…，于是就可以指定回到未来的某个版本：<br>git reset –hard 3628164</p><p><strong>git reflog</strong> 用来记录你的每一次命令</p><p><strong>cat readme.txt</strong>  打开文件</p><p><strong>git checkout -</strong> <file>  可以丢弃工作区的修改 ,  没有–，就变成了“切换到另一个分支”的命令，<br>git reset HEAD <file>    可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p><p><strong>git rm</strong> 删掉，</p><hr><p><strong>git push origin master</strong> 推到远程master分支</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2016/08/26/hello-world/"/>
+      <url>/2016/08/26/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ul><li><span id="more"></span><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Xcode插件管理工具-Alcatraz</title>
+      <link href="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/"/>
+      <url>/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.<br><em>Xcode8中Apple禁止了Xcode安装插件</em></p><p>手动安装Alcatraz,  在GitHub主页上找搜索<a href="https://github.com/alcatraz/Alcatraz">Alcatrazde</a> , 或者浏览器地址栏直接输入<a href="https://github.com/alcatraz/Alcatraz">https://github.com/alcatraz/Alcatraz</a></p><img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472176469450.png" class=""><ul><li><span id="more"></span>点击[Clone or download]选择 Download ZIP (如上图)，进行下载。</li></ul><p>下载完，解压ZIP, 双击打开 .xcodeproj 可执行文件，会打开Xcode，之后运行这个项目工程</p><img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472176649167.png" class=""><p>运行完，会出现一个会话弹出框，不要慌，这不是出现什么错误了(其实我刚开始看见这个的时候慌了一下)，淡定的点击 Load Bundles</p><img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472176707103.png" class=""><p>然后关闭Xcode(或者command ＋ Q), 重新打开Xcode<br>点击Windows可以看到Package Manager(Shift+Command+9)</p><img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472176837716.png" class=""><p>此时就可以打开Alcatraz管理工具了</p><img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472177132229.png" class=""><p><a href="http://www.cocoachina.com/ios/20160122/15080.html">Xcode 插件优缺点对比（推荐 20 款插件）</a></p><p><a href="http://www.tuicool.com/articles/zUZnAfj">工作中的常用插件 for Xcode</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Xcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>新的开篇</title>
+      <link href="/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/"/>
+      <url>/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/</url>
+      
+        <content type="html"><![CDATA[<h1 id="暂时的离别是为了再次相聚时的感动"><a href="#暂时的离别是为了再次相聚时的感动" class="headerlink" title="暂时的离别是为了再次相聚时的感动"></a>暂时的离别是为了再次相聚时的感动</h1><hr><h4 id="离别"><a href="#离别" class="headerlink" title="离别"></a>离别</h4><p>离别的时候<br>每一句话都是那么重<br>缓缓地扣击着我们的心灵<br>窗被敲开了<br>我们诉说着回忆中的快乐<br>回想著一张张可爱的笑脸<br>院子里，操场上<br>充满了甜甜的空气  </p><ul><li><span id="more"></span>离别的时候<br>每一句话都是那么轻<br>轻轻地说着离别时的感言<br>轻轻的拉着彼此的手<br>轻轻地在耳际说声对不起<br>或永远祝福你</li></ul><p>离别的时候<br>每一句话都显得那么悲伤<br>离别时的感动在顷刻间爆发<br>我们，我们，我们<br>独自沉浸在自己的感伤中<br>渐渐的平息……  </p><p>离别的时候<br>每一句话都显得那么珍贵<br>仔细的听著那熟悉的声音<br>把每种都印刻在记忆里  </p><p>望著他们远去的背影，我知道，我们离别了<br>我们带著共同的回忆和永远的祝福<br>各自奔向远方……<br>轻轻哼一首离别的歌～<br>眼里噙满了泪……  </p><h4 id="重逢"><a href="#重逢" class="headerlink" title="重逢"></a>重逢</h4><p>重逢的时候<br>那是心情的又一次触动<br>惊喜的表情<br>熟悉的面庞<br>回忆中的甜蜜<br>一瞬间在脑海中隐现<br>于是，永远成为了所谓的缘分的代表<br>重逢…惊喜…<br>重逢的时候<br>那是思念的又一次宣泄<br>深情的一个拥抱<br>紧紧的一个握手<br>彼此的心轻鬆了许多<br>才发现思念是一种病<br>重逢…思念……<br>重逢的时候<br>那是记忆的又一次翻新<br>彼此回忆著孩提时的美好<br>诉说着自己的苦恼<br>谈论着朋友的生活<br>讲述着自己无奈的过往<br>重逢…记忆…<br>重逢的时候<br>那是时间的又一次停滞<br>那一刻，时间终于停了<br>自己终于可以放假<br>感动的身体一时瘫在那里<br>重逢时的感动告诉了时光老人<br>时间不能改变的东西……<br>重逢…感动…<br>重逢的时候，那是一阵欣喜，一阵感动<br>欣喜之余还有一丝的忧伤<br>因为我们毕竟还要赶路<br>那么多线终有相交的一点<br>可是相交以后注定还要分别<br>但是，至少我明白<br>暂时的离别是为了再次相聚时的感动……  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
