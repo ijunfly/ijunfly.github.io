@@ -99,7 +99,7 @@
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?b380d1ff38b28103561cdd10d50be7e8";
+            hm.src = "//hm.baidu.com/hm.js?723cef39f5ebe313f5b75aeb11354685";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
         })();
@@ -203,7 +203,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E5%A2%99/" rel="tag">翻墙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/" rel="tag">酸酸乳</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -278,20 +278,20 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-160826-git基础命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-160831-AlertController的Click方法封装" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" class="article-date">
-      <time datetime="2016-08-26T06:11:46.000Z" itemprop="datePublished">2016-08-26</time>
+      <a href="/2016/08/31/6f517186ba1f.html" class="article-date">
+      <time datetime="2016-08-31T05:23:09.000Z" itemprop="datePublished">2016-08-31</time>
 </a>
 
  
-    <a href="/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/#comments" title="查看评论">
+    <a href="/2016/08/31/6f517186ba1f.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/26/160826-git基础命令/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/31/6f517186ba1f.html"></span>
         
     </a>
 
@@ -306,7 +306,236 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">git基础命令</a>
+      <a class="article-title" href="/2016/08/31/6f517186ba1f.html">AlertController的Click方法封装</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a target="_blank" rel="noopener" href="https://github.com/ijunfly/JFAlertViewController">JFAlertViewController</a>地址 <a target="_blank" rel="noopener" href="https://github.com/ijunfly/JFAlertViewController">https://github.com/ijunfly/JFAlertViewController</a></p>
+<p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
+<p>创建一个继承于JFAlertViewController的属性对象</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</span><br></pre></td></tr></table></figure>
+
+<p>初始化时要遵循delegate和dataSource</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/08/31/6f517186ba1f.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-160830-放羊人与砍柴人的故事" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/30/3023662f8e20.html" class="article-date">
+      <time datetime="2016-08-30T04:48:10.000Z" itemprop="datePublished">2016-08-30</time>
+</a>
+
+ 
+    <a href="/2016/08/30/3023662f8e20.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/30/3023662f8e20.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/30/3023662f8e20.html">放羊人与砍柴人的故事</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>你是砍柴的，他是放羊的，你和他聊了一天，他的羊吃饱了，你的柴呢？ 砍柴的陪不起放羊的——请放弃你的无效社交！</p>
+<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/08/30/3023662f8e20.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-160826-Xcode插件-Alcatraz" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/26/7472c647ead7.html" class="article-date">
+      <time datetime="2016-08-26T02:35:35.000Z" itemprop="datePublished">2016-08-26</time>
+</a>
+
+ 
+    <a href="/2016/08/26/7472c647ead7.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/26/7472c647ead7.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/26/7472c647ead7.html">Xcode插件管理工具-Alcatraz</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.<br><em>Xcode8中Apple禁止了Xcode安装插件</em></p>
+<p>手动安装Alcatraz,  在GitHub主页上找搜索<a target="_blank" rel="noopener" href="https://github.com/alcatraz/Alcatraz">Alcatrazde</a> , 或者浏览器地址栏直接输入<a target="_blank" rel="noopener" href="https://github.com/alcatraz/Alcatraz">https://github.com/alcatraz/Alcatraz</a></p>
+<img src="/2016/08/26/7472c647ead7/0826-1472176469450.png" class="">
+<ul>
+<li>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/08/26/7472c647ead7.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-160825-git基础命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/25/64b2c31ab32a.html" class="article-date">
+      <time datetime="2016-08-25T06:11:46.000Z" itemprop="datePublished">2016-08-25</time>
+</a>
+
+ 
+    <a href="/2016/08/25/64b2c31ab32a.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/25/64b2c31ab32a.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/25/64b2c31ab32a.html">git基础命令</a>
     </h1>
   
 
@@ -318,7 +547,7 @@
           
               <p><strong>pwd</strong> 命令用于显示当前目录</p>
 <p><strong>git init</strong>命令把这个目录变成Git可以管理的仓库</p>
-<p>现有的仓库  <strong>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#46;&#x32;&#51;&#53;">&#x67;&#105;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#46;&#x32;&#51;&#53;</a>:iOSTeam&#x2F;xxx.git</strong> 这个要替换项目地址</p>
+<p>现有的仓库  <strong>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#x31;&#x39;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#x2e;&#x32;&#x33;&#53;">&#103;&#x69;&#116;&#x40;&#x31;&#x39;&#x32;&#46;&#x31;&#x36;&#x38;&#x2e;&#x31;&#x2e;&#x32;&#x33;&#53;</a>:iOSTeam&#x2F;xxx.git</strong> 这个要替换项目地址</p>
 <p><strong>ssh-add</strong>  ~&#x2F;.ssh&#x2F;xxx_id_rsa   添加sshKey  不至于每次输入密码</p>
 <p>用ls -ah命令就可以看见所有文件</p>
 <p><strong>git add</strong> 文件名字.后缀   git add  . &#x2F;&#x2F; 所有文件</p>
@@ -338,7 +567,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/08/26/160826-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/#more">more >></a>
+          <a href="/2016/08/25/64b2c31ab32a.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -357,20 +586,20 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-160820-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/26/hello-world/" class="article-date">
-      <time datetime="2016-08-26T02:57:25.000Z" itemprop="datePublished">2016-08-26</time>
+      <a href="/2016/08/20/31047e7c1977.html" class="article-date">
+      <time datetime="2016-08-20T06:11:46.000Z" itemprop="datePublished">2016-08-20</time>
 </a>
 
  
-    <a href="/2016/08/26/hello-world/#comments" title="查看评论">
+    <a href="/2016/08/20/31047e7c1977.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/26/hello-world/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/20/31047e7c1977.html"></span>
         
     </a>
 
@@ -385,7 +614,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/08/20/31047e7c1977.html">Hello World</a>
     </h1>
   
 
@@ -409,7 +638,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/08/26/hello-world/#more">more >></a>
+          <a href="/2016/08/20/31047e7c1977.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -428,97 +657,20 @@
 
 
   
-    <article id="post-Xcode插件管理工具-Alcatraz" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-160815-新的开篇" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/" class="article-date">
-      <time datetime="2016-08-26T02:35:35.000Z" itemprop="datePublished">2016-08-26</time>
-</a>
-
- 
-    <a href="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/26/Xcode插件管理工具-Alcatraz/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/">Xcode插件管理工具-Alcatraz</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h1><p><strong>Alcatraz</strong>是管理Xcode插件的插件,  集成在Xcode图形界面中.<br><em>Xcode8中Apple禁止了Xcode安装插件</em></p>
-<p>手动安装Alcatraz,  在GitHub主页上找搜索<a target="_blank" rel="noopener" href="https://github.com/alcatraz/Alcatraz">Alcatrazde</a> , 或者浏览器地址栏直接输入<a target="_blank" rel="noopener" href="https://github.com/alcatraz/Alcatraz">https://github.com/alcatraz/Alcatraz</a></p>
-<img src="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/0826-1472176469450.png" class="">
-<ul>
-<li>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/26/Xcode%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Alcatraz/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-新的开篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/" class="article-date">
+      <a href="/2016/08/15/02fee1cc85dd.html" class="article-date">
       <time datetime="2016-08-15T06:08:44.000Z" itemprop="datePublished">2016-08-15</time>
 </a>
 
  
-    <a href="/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/#comments" title="查看评论">
+    <a href="/2016/08/15/02fee1cc85dd.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/15/新的开篇/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/08/15/02fee1cc85dd.html"></span>
         
     </a>
 
@@ -533,7 +685,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/">新的开篇</a>
+      <a class="article-title" href="/2016/08/15/02fee1cc85dd.html">新的开篇</a>
     </h1>
   
 
@@ -562,7 +714,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/08/15/%E6%96%B0%E7%9A%84%E5%BC%80%E7%AF%87/#more">more >></a>
+          <a href="/2016/08/15/02fee1cc85dd.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

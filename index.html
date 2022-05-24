@@ -99,7 +99,7 @@
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?b380d1ff38b28103561cdd10d50be7e8";
+            hm.src = "//hm.baidu.com/hm.js?723cef39f5ebe313f5b75aeb11354685";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
         })();
@@ -203,7 +203,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E5%A2%99/" rel="tag">翻墙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/" rel="tag">酸酸乳</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -278,20 +278,20 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-220523-复习GCD" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-220524-LLDB" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/05/23/220523-%E5%A4%8D%E4%B9%A0GCD/" class="article-date">
-      <time datetime="2022-05-23T15:40:25.000Z" itemprop="datePublished">2022-05-23</time>
+      <a href="/2022/05/24/284708204981.html" class="article-date">
+      <time datetime="2022-05-24T15:03:48.000Z" itemprop="datePublished">2022-05-24</time>
 </a>
 
  
-    <a href="/2022/05/23/220523-%E5%A4%8D%E4%B9%A0GCD/#comments" title="查看评论">
+    <a href="/2022/05/24/284708204981.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2022/05/23/220523-复习GCD/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2022/05/24/284708204981.html"></span>
         
     </a>
 
@@ -306,7 +306,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/23/220523-%E5%A4%8D%E4%B9%A0GCD/">复习GCD</a>
+      <a class="article-title" href="/2022/05/24/284708204981.html">LLDB</a>
     </h1>
   
 
@@ -316,27 +316,182 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="队列-FIFO"><a href="#队列-FIFO" class="headerlink" title="队列 FIFO"></a>队列 FIFO</h2><ul>
+              <h1 id="LLDB"><a href="#LLDB" class="headerlink" title="LLDB"></a>LLDB</h1><ul>
+<li><code>po</code>: 为 print object 的缩写，显示对象的文本描述, <code>expression -O</code>的别称</li>
+<li><code>bt</code>: 打印当前堆栈信息</li>
+<li><code>register read xx</code>: 读取寄存器</li>
+<li><code>memory read/个数+格式+每个地址单元的长度 内存地址</code> 查看内存数据<ul>
+<li>默认为：memory read&#x2F;16xb</li>
+<li><code>格式</code>: x-16进制、f-浮点数，d-10进制，u-10进制无符号，o-8进制，t-2进制<br>  a-16进制格式+实际地址类型，i-指令地址格式，c-按字符格式</li>
+<li><code>字节数</code>: b-1个字节，h-2个字节，w-4个字节，g-8个字节。</li>
+<li><code>x = memory read</code> x&#x2F;16xb</li>
+</ul>
+</li>
+<li><code>memory write 地址 数据</code> 向指定内存写入数据
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/24/284708204981.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220524-Flutter布局约束" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/24/75dbaf21f054.html" class="article-date">
+      <time datetime="2022-05-24T13:18:16.000Z" itemprop="datePublished">2022-05-24</time>
+</a>
+
+ 
+    <a href="/2022/05/24/75dbaf21f054.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2022/05/24/75dbaf21f054.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/24/75dbaf21f054.html">Flutter布局约束</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="布局约束"><a href="#布局约束" class="headerlink" title="布局约束"></a>布局约束</h1><p>Flutter 中有两种布局模型：</p>
+<ul>
+<li>基于 RenderBox 的盒模型布局。</li>
+<li>基于 Sliver ( RenderSliver ) 按需加载列表布局。</li>
+</ul>
+<p>大致布局流程如下：</p>
+<ol>
+<li>上层组件向下层组件传递约束（constraints）条件。</li>
+<li>下层组件确定自己的大小，然后告诉上层组件。注意下层组件的大小必须符合父组件的约束。</li>
+<li>上层组件确定下层组件相对于自身的偏移和确定自身的大小（大多数情况下会根据子组件的大小来确定自身的大小）。</li>
+</ol>
+<p><code>因为任何时候子组件都必须先遵守父组件的约束</code></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/24/75dbaf21f054.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220523-复习GCD" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/23/be08fa8a65d5.html" class="article-date">
+      <time datetime="2022-05-23T15:40:25.000Z" itemprop="datePublished">2022-05-23</time>
+</a>
+
+ 
+    <a href="/2022/05/23/be08fa8a65d5.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2022/05/23/be08fa8a65d5.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/23/be08fa8a65d5.html">复习GCD</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="队列-FIFO"><a href="#队列-FIFO" class="headerlink" title="队列 FIFO"></a>队列 FIFO</h2><ul>
 <li>串行队列</li>
 <li>并发队列</li>
 <li>全局并发队列</li>
 <li>主队列</li>
 </ul>
 <p>队列只是用来存储任务，没有能力去调度任务</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li>同步函数 dispatch_sync<ul>
-<li>立即执行、会阻塞当前线程、不具备开辟子线程的能力</li>
-<li>没有线程相关的操作、没有保存任务、立即执行了任务</li>
-</ul>
-</li>
-<li>异步函数 dispatch_async<ul>
-<li>开辟子线程、不会立即执行、不会阻塞当前线程</li>
-<li>保存block、函数式编程、有线程相关的操作</li>
-</ul>
-</li>
-</ul>
-<p>死锁： 在当前线程同步的向串行队列里面添加任务，当前线程锁执行的任务是从当前队列里取出来的</p>
-
+          
       
     </div>
     
@@ -349,6 +504,84 @@
         <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2022/05/23/be08fa8a65d5.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220508-Objc4-838" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/08/e233db870454.html" class="article-date">
+      <time datetime="2022-05-08T15:13:33.000Z" itemprop="datePublished">2022-05-08</time>
+</a>
+
+ 
+    <a href="/2022/05/08/e233db870454.html#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2022/05/08/e233db870454.html"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/08/e233db870454.html">编译Objc4-838</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="编译Objc源码"><a href="#编译Objc源码" class="headerlink" title="编译Objc源码"></a>编译Objc源码</h1><p>要诀:<br>能删则删, 不确定先注释,<br>需加须加, 能设置就设置.</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>本次编译<code>objc4-838</code>源码, 即对应<code>macOS 12.2</code>, 高版本未尝试, 理论上大版本一致可行<br>以下相关源码均可在<a target="_blank" rel="noopener" href="https://opensource.apple.com/releases/">Apple Open Source</a>中 <code>macOS Monterey 12 -&gt; macOS 12.2</code> 分支看到</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objc/" rel="tag">objc</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/08/e233db870454.html#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -369,17 +602,17 @@
     <article id="post-190829-MacOS-使用SFMono字体" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/" class="article-date">
+      <a href="/2019/08/29/3504b9da5c42.html" class="article-date">
       <time datetime="2019-08-29T01:23:52.000Z" itemprop="datePublished">2019-08-29</time>
 </a>
 
  
-    <a href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/#comments" title="查看评论">
+    <a href="/2019/08/29/3504b9da5c42.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2019/08/29/190829-MacOS-使用SFMono字体/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2019/08/29/3504b9da5c42.html"></span>
         
     </a>
 
@@ -394,7 +627,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/">macOS 使用SFMono字体</a>
+      <a class="article-title" href="/2019/08/29/3504b9da5c42.html">macOS 使用SFMono字体</a>
     </h1>
   
 
@@ -421,7 +654,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2019/08/29/190829-MacOS-%E4%BD%BF%E7%94%A8SFMono%E5%AD%97%E4%BD%93/#more">more >></a>
+          <a href="/2019/08/29/3504b9da5c42.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -440,20 +673,20 @@
 
 
   
-    <article id="post-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-190828-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/28/go-go-go-2019/" class="article-date">
+      <a href="/2019/08/28/6aaf43c133c4.html" class="article-date">
       <time datetime="2019-08-28T07:57:35.000Z" itemprop="datePublished">2019-08-28</time>
 </a>
 
  
-    <a href="/2019/08/28/go-go-go-2019/#comments" title="查看评论">
+    <a href="/2019/08/28/6aaf43c133c4.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2019/08/28/go-go-go-2019/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2019/08/28/6aaf43c133c4.html"></span>
         
     </a>
 
@@ -468,7 +701,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/go-go-go-2019/">go go go 2019</a>
+      <a class="article-title" href="/2019/08/28/6aaf43c133c4.html">go go go 2019</a>
     </h1>
   
 
@@ -506,100 +739,20 @@
 
 
   
-    <article id="post-170213-服务端搭建Shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/" class="article-date">
-      <time datetime="2017-02-13T08:58:44.000Z" itemprop="datePublished">2017-02-13</time>
-</a>
-
- 
-    <a href="/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2017/02/13/170213-服务端搭建Shadowsocks/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/">服务端搭建Shadowsocks</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>Shadowsocks服务端搭建</p>
-<p>我服务器使用的是<a target="_blank" rel="noopener" href="http://www.vultr.com/?ref=7106338-3B">Vultr</a>的, 现在购买优惠力度大大的, <a target="_blank" rel="noopener" href="http://www.vultr.com/?ref=7106338-3B">点优惠链接</a><br>服务器系统:CentOS 7 X64</p>
-<p>使用ssh登录服务器<code>ssh root@45.76.--.-- </code> 输入密码…</p>
-<p>下面的命令逐行执行，如果没有报错，即为执行成功，出现确认提示的时候，输入y后，回车即可..</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yum install epel-release</span><br><span class="line">$ yum update</span><br><span class="line">$ yum install python-setuptools m2crypto supervisor</span><br><span class="line">$ easy_install pip</span><br><span class="line">$ pip install shadowsocks</span><br></pre></td></tr></table></figure>
-
-<p>继续执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BF%BB%E5%A2%99/" rel="tag">翻墙</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/" rel="tag">酸酸乳</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/02/13/170213-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BAShadowsocks/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-161124-判断字符是否是纯数字" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/" class="article-date">
+      <a href="/2016/11/24/e13e51eae9f1.html" class="article-date">
       <time datetime="2016-11-24T01:53:43.000Z" itemprop="datePublished">2016-11-24</time>
 </a>
 
  
-    <a href="/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/#comments" title="查看评论">
+    <a href="/2016/11/24/e13e51eae9f1.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/11/24/161124-判断字符是否是纯数字/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/11/24/e13e51eae9f1.html"></span>
         
     </a>
 
@@ -614,7 +767,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/">判断字符是否是纯数字</a>
+      <a class="article-title" href="/2016/11/24/e13e51eae9f1.html">判断字符是否是纯数字</a>
     </h1>
   
 
@@ -640,7 +793,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/11/24/161124-%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%98%AF%E5%90%A6%E6%98%AF%E7%BA%AF%E6%95%B0%E5%AD%97/#more">more >></a>
+          <a href="/2016/11/24/e13e51eae9f1.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -662,17 +815,17 @@
     <article id="post-160924-15分钟学会git" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/" class="article-date">
+      <a href="/2016/09/24/c859e4c3dee5.html" class="article-date">
       <time datetime="2016-09-24T02:17:26.000Z" itemprop="datePublished">2016-09-24</time>
 </a>
 
  
-    <a href="/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/#comments" title="查看评论">
+    <a href="/2016/09/24/c859e4c3dee5.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/09/24/160924-15分钟学会git/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/09/24/c859e4c3dee5.html"></span>
         
     </a>
 
@@ -687,7 +840,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/">15分钟快速学会git</a>
+      <a class="article-title" href="/2016/09/24/c859e4c3dee5.html">15分钟快速学会git</a>
     </h1>
   
 
@@ -720,7 +873,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/09/24/160924-15%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9Agit/#more">more >></a>
+          <a href="/2016/09/24/c859e4c3dee5.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -742,17 +895,17 @@
     <article id="post-160923-隐藏navigationBar底部的黑线shadowImage" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/" class="article-date">
+      <a href="/2016/09/23/9adbb56f98f1.html" class="article-date">
       <time datetime="2016-09-23T08:45:49.000Z" itemprop="datePublished">2016-09-23</time>
 </a>
 
  
-    <a href="/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/#comments" title="查看评论">
+    <a href="/2016/09/23/9adbb56f98f1.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/09/23/160923-隐藏navigationBar底部的黑线shadowImage/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/09/23/9adbb56f98f1.html"></span>
         
     </a>
 
@@ -767,7 +920,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/">隐藏navigationBar底部的黑线shadowImage</a>
+      <a class="article-title" href="/2016/09/23/9adbb56f98f1.html">隐藏navigationBar底部的黑线shadowImage</a>
     </h1>
   
 
@@ -796,7 +949,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/09/23/160923-%E9%9A%90%E8%97%8FnavigationBar%E5%BA%95%E9%83%A8%E7%9A%84%E9%BB%91%E7%BA%BFshadowImage/#more">more >></a>
+          <a href="/2016/09/23/9adbb56f98f1.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -818,17 +971,17 @@
     <article id="post-160920-更改rootViewController添加动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/" class="article-date">
+      <a href="/2016/09/20/01edb6427252.html" class="article-date">
       <time datetime="2016-09-20T01:58:35.000Z" itemprop="datePublished">2016-09-20</time>
 </a>
 
  
-    <a href="/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/#comments" title="查看评论">
+    <a href="/2016/09/20/01edb6427252.html#comments" title="查看评论">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/09/20/160920-更改rootViewController添加动画/"></span>
+            <span class="disqus-comment-count" data-disqus-identifier="2016/09/20/01edb6427252.html"></span>
         
     </a>
 
@@ -843,7 +996,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/">更改rootViewController时添加动画</a>
+      <a class="article-title" href="/2016/09/20/01edb6427252.html">更改rootViewController时添加动画</a>
     </h1>
   
 
@@ -871,159 +1024,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/09/20/160920-%E6%9B%B4%E6%94%B9rootViewController%E6%B7%BB%E5%8A%A0%E5%8A%A8%E7%94%BB/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-160831-AlertController的Click方法封装" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/" class="article-date">
-      <time datetime="2016-08-31T05:23:09.000Z" itemprop="datePublished">2016-08-31</time>
-</a>
-
- 
-    <a href="/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/31/160831-AlertController的Click方法封装/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/">AlertController的Click方法封装</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>封装的AlertController, 不至于每次写alert时 好多Block回调;<br>先上 <a target="_blank" rel="noopener" href="https://github.com/ijunfly/JFAlertViewController">JFAlertViewController</a>地址 <a target="_blank" rel="noopener" href="https://github.com/ijunfly/JFAlertViewController">https://github.com/ijunfly/JFAlertViewController</a></p>
-<p>每次写AlertView时每个按钮都要写一个Block来回调方法, 这样会使代码太多</p>
-<p>创建一个继承于JFAlertViewController的属性对象</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) JFAlertViewController *alertAllVC;</span><br></pre></td></tr></table></figure>
-
-<p>初始化时要遵循delegate和dataSource</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/31/160831-AlertController%E7%9A%84Click%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-160830-放羊人与砍柴人的故事" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/" class="article-date">
-      <time datetime="2016-08-30T04:48:10.000Z" itemprop="datePublished">2016-08-30</time>
-</a>
-
- 
-    <a href="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/30/160830-放羊人与砍柴人的故事/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/">放羊人与砍柴人的故事</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>你是砍柴的，他是放羊的，你和他聊了一天，他的羊吃饱了，你的柴呢？ 砍柴的陪不起放羊的——请放弃你的无效社交！</p>
-<p>你是砍柴的，他是放羊的，你和他聊了一天，如是你学会了放羊技巧，
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/30/160830-%E6%94%BE%E7%BE%8A%E4%BA%BA%E4%B8%8E%E7%A0%8D%E6%9F%B4%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B/#more">more >></a>
+          <a href="/2016/09/20/01edb6427252.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
