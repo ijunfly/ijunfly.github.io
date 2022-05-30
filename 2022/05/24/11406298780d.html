@@ -17,22 +17,23 @@
 
 <meta name="description" content="布局约束Flutter 中有两种布局模型：  基于 RenderBox 的盒模型布局。 基于 Sliver ( RenderSliver ) 按需加载列表布局。  大致布局流程如下：  上层组件向下层组件传递约束（constraints）条件。 下层组件确定自己的大小，然后告诉上层组件。注意下层组件的大小必须符合父组件的约束。 上层组件确定下层组件相对于自身的偏移和确定自身的大小（大多数情况下会根">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flutter布局约束">
-<meta property="og:url" content="http://junfly.xyz/2022/05/24/75dbaf21f054.html">
+<meta property="og:title" content="Flutter 布局约束">
+<meta property="og:url" content="http://junfly.xyz/2022/05/24/11406298780d.html">
 <meta property="og:site_name" content="雾中魔幻糖">
 <meta property="og:description" content="布局约束Flutter 中有两种布局模型：  基于 RenderBox 的盒模型布局。 基于 Sliver ( RenderSliver ) 按需加载列表布局。  大致布局流程如下：  上层组件向下层组件传递约束（constraints）条件。 下层组件确定自己的大小，然后告诉上层组件。注意下层组件的大小必须符合父组件的约束。 上层组件确定下层组件相对于自身的偏移和确定自身的大小（大多数情况下会根">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://junfly.xyz/2022/05/24/75dbaf21f054/16533793465334.jpg">
-<meta property="og:image" content="http://junfly.xyz/2022/05/24/75dbaf21f054/16533795446838.jpg">
-<meta property="og:image" content="http://junfly.xyz/2022/05/24/75dbaf21f054/16533807548379.jpg">
-<meta property="og:image" content="http://junfly.xyz/2022/05/24/75dbaf21f054/16533826173981.jpg">
+<meta property="og:image" content="http://junfly.xyz/2022/05/24/11406298780d/16533793465334.jpg">
+<meta property="og:image" content="http://junfly.xyz/2022/05/24/11406298780d/16533795446838.jpg">
+<meta property="og:image" content="http://junfly.xyz/2022/05/24/11406298780d/16533807548379.jpg">
+<meta property="og:image" content="http://junfly.xyz/2022/05/24/11406298780d/16533826173981.jpg">
 <meta property="article:published_time" content="2022-05-24T13:18:16.000Z">
-<meta property="article:modified_time" content="2022-05-24T15:24:20.523Z">
+<meta property="article:modified_time" content="2022-05-30T16:54:08.961Z">
 <meta property="article:author" content="JunFly">
 <meta property="article:tag" content="iOS">
 <meta property="article:tag" content="Flutter">
+<meta property="article:tag" content="Layout">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://junfly.xyz/2022/05/24/75dbaf21f054/16533793465334.jpg">
+<meta name="twitter:image" content="http://junfly.xyz/2022/05/24/11406298780d/16533793465334.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -66,7 +67,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Flutter布局约束 | 雾中魔幻糖</title>
+<title>Flutter 布局约束 | 雾中魔幻糖</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -207,7 +208,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lock/" rel="tag">Lock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lock/" rel="tag">Lock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -280,10 +281,10 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-220524-Flutter布局约束" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-220524-Flutter-布局约束" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/05/24/75dbaf21f054.html" class="article-date">
+      <a href="/2022/05/24/11406298780d.html" class="article-date">
       <time datetime="2022-05-24T13:18:16.000Z" itemprop="datePublished">2022-05-24</time>
 </a>
 
@@ -299,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Flutter布局约束
+      Flutter 布局约束
     </h1>
   
 
@@ -310,7 +311,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -346,17 +347,17 @@
 
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Widget testConstrainedBox() &#123;</span><br><span class="line">  <span class="keyword">return</span> ConstrainedBox( <span class="comment">// 父组件</span></span><br><span class="line">    constraints: <span class="keyword">const</span> BoxConstraints( <span class="comment">// 父组件对子组件的 约束信息</span></span><br><span class="line">        minWidth: <span class="built_in">double</span>.infinity, <span class="comment">// 宽度尽可能大</span></span><br><span class="line">        minHeight: <span class="number">80.0</span> <span class="comment">// 最小高度为80像素</span></span><br><span class="line">        ),</span><br><span class="line">    child: SizedBox( <span class="comment">// 子组件</span></span><br><span class="line">      height: <span class="number">20.0</span>, <span class="comment">// 虽然20小于80， 但是父组件约束了最小为80</span></span><br><span class="line">      child: yellowBox,</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>效果</p>
-<img src="/2022/05/24/75dbaf21f054/16533793465334.jpg" class=""> 
+<img src="/2022/05/24/11406298780d/16533793465334.jpg" class=""> 
 
 <p>虽然自组件设置的高是20, 但是父组件约束了最小为80, 所以高度是80</p>
 <h4 id="SizedBox"><a href="#SizedBox" class="headerlink" title="SizedBox"></a>SizedBox</h4><p>SizedBox只是ConstrainedBox的一个定制,</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SizedBox(width: <span class="number">80.0</span>, height: <span class="number">80.0</span>, child: yellowBox)</span><br><span class="line"><span class="comment">// 等价于 </span></span><br><span class="line">ConstrainedBox(</span><br><span class="line">  constraints: BoxConstraints.tightFor(width: <span class="number">80.0</span>, height: <span class="number">80.0</span>),</span><br><span class="line">  child: yellowBox, </span><br><span class="line">)</span><br><span class="line"><span class="comment">// 又等价于</span></span><br><span class="line">ConstrainedBox(</span><br><span class="line">  constraints: BoxConstraints(minHeight: <span class="number">80.0</span>, maxHeight: <span class="number">80.0</span>, minWidth: <span class="number">80.0</span>, maxWidth: <span class="number">80.0</span>),</span><br><span class="line">  child: yellowBox, </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<img src="/2022/05/24/75dbaf21f054/16533795446838.jpg" class="">
+<img src="/2022/05/24/11406298780d/16533795446838.jpg" class="">
 
 <p>其实<code>ConstrainedBox</code>和<code>SizedBox</code>都是通过<code>RenderConstrainedBox</code>来渲染的;</p>
 <h4 id="多层约束"><a href="#多层约束" class="headerlink" title="多层约束"></a>多层约束</h4><p>如果使用多层ConstrainedBox父组件 会是什么情况呢?</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 外小 内大</span></span><br><span class="line">ConstrainedBox( <span class="comment">// 祖父组件</span></span><br><span class="line">  constraints: BoxConstraints(minWidth: <span class="number">140.0</span>, minHeight: <span class="number">40.0</span>),</span><br><span class="line">  child: ConstrainedBox( <span class="comment">// 父组件</span></span><br><span class="line">    constraints: BoxConstraints(minWidth: <span class="number">180.0</span>, minHeight: <span class="number">80.0</span>),</span><br><span class="line">    child: yellowBox, <span class="comment">// 子组件</span></span><br><span class="line">  ),</span><br><span class="line">);</span><br><span class="line"><span class="comment">// 外大 内小</span></span><br><span class="line">ConstrainedBox( <span class="comment">// 祖父组件</span></span><br><span class="line">  constraints: BoxConstraints(minWidth: <span class="number">180.0</span>, minHeight: <span class="number">80.0</span>),</span><br><span class="line">  child: ConstrainedBox( <span class="comment">// 父组件</span></span><br><span class="line">    constraints: BoxConstraints(minWidth: <span class="number">140.0</span>, minHeight: <span class="number">40.0</span>),</span><br><span class="line">    child: yellowBox, <span class="comment">// 子组件</span></span><br><span class="line">  ),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<img src="/2022/05/24/75dbaf21f054/16533807548379.jpg" class="">
+<img src="/2022/05/24/11406298780d/16533807548379.jpg" class="">
 
 <p>因为约束条件是用来约束子组件的</p>
 <ul>
@@ -366,7 +367,7 @@
 <h3 id="UnconstrainedBox"><a href="#UnconstrainedBox" class="headerlink" title="UnconstrainedBox"></a>UnconstrainedBox</h3><p>虽然任何时候子组件都必须遵守其父组件的约束，但前提条件是它们必须是父子关系，</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ConstrainedBox( <span class="comment">// 曾祖父组件</span></span><br><span class="line">  constraints: BoxConstraints(minWidth: <span class="number">180.0</span>, minHeight: <span class="number">80.0</span>), <span class="comment">// 曾祖父组件约束</span></span><br><span class="line">  child: UnconstrainedBox( <span class="comment">// 祖父组件, “去除”曾祖父组件的约束</span></span><br><span class="line">    child: ConstrainedBox( <span class="comment">// 父组件</span></span><br><span class="line">      constraints: BoxConstraints(minWidth: <span class="number">80.0</span>, minHeight: <span class="number">30.0</span>), <span class="comment">// 父组件约束</span></span><br><span class="line">      child: yellowBox, <span class="comment">// 子组件</span></span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<img src="/2022/05/24/75dbaf21f054/16533826173981.jpg" class="">
+<img src="/2022/05/24/11406298780d/16533826173981.jpg" class="">
 
 <p><strong>任何时候子组件都必须遵守其父组件的约束</strong></p>
 <p>需要注意，UnconstrainedBox 虽然在其子组件布局时可以取消约束（子组件可以为无限大），但是 UnconstrainedBox 自身是受其父组件约束的，所以当 UnconstrainedBox 随着其子组件变大后，如果UnconstrainedBox 的大小超过它父组件约束时，也会导致溢出报错!</p>
@@ -384,13 +385,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2022/05/24/75dbaf21f054.html">Flutter布局约束</a></p>
+        <p><span>本文标题:</span><a href="/2022/05/24/11406298780d.html">Flutter 布局约束</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">JunFly</a></p>
         <p><span>发布时间:</span>2022-05-24, 21:18:16</p>
-        <p><span>最后更新:</span>2022-05-24, 23:24:20</p>
+        <p><span>最后更新:</span>2022-05-31, 00:54:08</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2022/05/24/75dbaf21f054.html" title="Flutter布局约束">http://junfly.xyz/2022/05/24/75dbaf21f054.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://junfly.xyz/2022/05/24/75dbaf21f054.html　　作者: JunFly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2022/05/24/11406298780d.html" title="Flutter 布局约束">http://junfly.xyz/2022/05/24/11406298780d.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://junfly.xyz/2022/05/24/11406298780d.html　　作者: JunFly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -459,7 +460,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Flutter布局约束　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Flutter 布局约束　| 雾中魔幻糖　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -510,7 +511,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/05/27/ab7dd047758f.html">iOS Lock</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/284708204981.html">LLDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/75dbaf21f054.html">Flutter布局约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/23/be08fa8a65d5.html">复习GCD</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/08/e233db870454.html">编译Objc4-838</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/3504b9da5c42.html">macOS 使用SFMono字体</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/6aaf43c133c4.html">go go go 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/e13e51eae9f1.html">判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/c859e4c3dee5.html">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/9adbb56f98f1.html">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/01edb6427252.html">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/6f517186ba1f.html">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/3023662f8e20.html">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/7472c647ead7.html">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/25/64b2c31ab32a.html">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/31047e7c1977.html">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/02fee1cc85dd.html">新的开篇</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/05/29/fe66a5355c28.html">Flutter 对齐与相对定位</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/28/68dbbde40c84.html">Flutter 层叠布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/27/ab7dd047758f.html">iOS Lock</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/27/f80c8416a26c.html">Flutter 流式布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/26/b7fe3f1c9dfb.html">Flutter 弹性布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/25/19cb93b3048e.html">Flutter 线性布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/284708204981.html">LLDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/11406298780d.html">Flutter 布局约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/23/be08fa8a65d5.html">复习GCD</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/08/e233db870454.html">编译Objc4-838</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/3504b9da5c42.html">macOS 使用SFMono字体</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/6aaf43c133c4.html">go go go 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/24/e13e51eae9f1.html">判断字符是否是纯数字</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/c859e4c3dee5.html">15分钟快速学会git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/9adbb56f98f1.html">隐藏navigationBar底部的黑线shadowImage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/01edb6427252.html">更改rootViewController时添加动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/31/6f517186ba1f.html">AlertController的Click方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/3023662f8e20.html">放羊人与砍柴人的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/7472c647ead7.html">Xcode插件管理工具-Alcatraz</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/25/64b2c31ab32a.html">git基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/31047e7c1977.html">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/02fee1cc85dd.html">新的开篇</a></li></ul>
 
 
 

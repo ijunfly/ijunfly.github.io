@@ -207,7 +207,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lock/" rel="tag">Lock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/" rel="tag">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLDB/" rel="tag">LLDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lock/" rel="tag">Lock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc/" rel="tag">objc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%85%E4%BA%8B/" rel="tag">故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
                     </div>
                 </section>
                 
@@ -282,6 +282,186 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-220529-Flutter-对齐与相对定位" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/29/fe66a5355c28.html" class="article-date">
+      <time datetime="2022-05-28T17:03:48.000Z" itemprop="datePublished">2022-05-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/29/fe66a5355c28.html">Flutter 对齐与相对定位</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="对齐与相对定位（Align）"><a href="#对齐与相对定位（Align）" class="headerlink" title="对齐与相对定位（Align）"></a>对齐与相对定位（Align）</h1><p>定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Align(&#123;</span><br><span class="line">  <span class="keyword">this</span>.alignment = Alignment.center,</span><br><span class="line">  <span class="keyword">this</span>.widthFactor,</span><br><span class="line">  <span class="keyword">this</span>.heightFactor,</span><br><span class="line">  Widget child,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>alignment : 需要一个AlignmentGeometry类型的值，表示子组件在父组件中的起始位置。AlignmentGeometry 是一个抽象类，它有两个常用的子类：Alignment和 FractionalOffset，我们将在下面的示例中详细介绍。</li>
+<li>widthFactor和heightFactor是用于确定Align 组件本身宽高的属性；<ul>
+<li>它们是两个缩放因子，会分别乘以子元素的宽、高，最终的结果就是Align 组件的宽高。</li>
+<li>如果值为null，则组件的宽高将会占用尽可能多的空间。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Container(</span><br><span class="line">  height: <span class="number">120.0</span>, <span class="comment">// 高度父组件决定</span></span><br><span class="line">  <span class="comment">// width: 120.0, // 宽度使用align确定， 优先级大于子组件</span></span><br><span class="line">  color: Colors.blue.shade50,</span><br><span class="line">  child: Align(</span><br><span class="line">    widthFactor: <span class="number">3</span>, <span class="comment">// 宽度为自身的3倍，  </span></span><br><span class="line">    <span class="comment">// 当align和父组件都设置了的话，父组件的生效</span></span><br><span class="line">    alignment: Alignment.topRight, <span class="comment">// 对齐位置是右上角, 即子组件和父组件的右上角对齐</span></span><br><span class="line">    child: FlutterLogo(</span><br><span class="line">      size: <span class="number">60</span>,</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<img src="/2022/05/29/fe66a5355c28/16538377129777.jpg" class="">
+
+<h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><p>定义：<code>Alignment(this.x, this.y)</code><br>Alignment继承自AlignmentGeometry，表示矩形内的一个点，他有两个属性x、y，分别表示在水平和垂直方向的偏移<br>Alignment Widget会以矩形的中心点作为坐标原点，即Alignment(0.0, 0.0) 。x、y的值从-1到1分别代表矩形左边到右边的距离和顶部到底边的距离，因此2个水平（或垂直）单位则等于矩形的宽（或高）； 如Alignment(-1.0, -1.0) 代表矩形的左侧顶点</p>
+<p>具体偏移为<br>offset(x, y) &#x3D; (Alignment.x * childWidth &#x2F; 2 + childWidth &#x2F; 2, Alignment.y * childHeight &#x2F; 2 + childHeight &#x2F; 2)</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Container(</span><br><span class="line">  height: <span class="number">120.0</span>, <span class="comment">// 高度父组件决定</span></span><br><span class="line">  <span class="comment">// width: 120.0, // 宽度使用align确定， 优先级大于子组件</span></span><br><span class="line">  color: Colors.blue.shade50,</span><br><span class="line">  child: Align(</span><br><span class="line">    widthFactor: <span class="number">3</span>, <span class="comment">// 宽度为自身的3倍，  </span></span><br><span class="line">    <span class="comment">// 当align和父组件都设置了的话，父组件的生效</span></span><br><span class="line">    alignment: Alignment(<span class="number">2</span>, <span class="number">0</span>), <span class="comment">// 对齐位置为</span></span><br><span class="line">    child: FlutterLogo(</span><br><span class="line">      size: <span class="number">60</span>,</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<img src="/2022/05/29/fe66a5355c28/16538380684489.jpg" class="">
+
+<h3 id="FractionalOffset"><a href="#FractionalOffset" class="headerlink" title="FractionalOffset"></a>FractionalOffset</h3><p>FractionalOffset 继承自 Alignment，它和 Alignment唯一的区别就是坐标原点不同！FractionalOffset 的坐标原点为矩形的左侧顶点，这和布局系统的一致，所以理解起来会比较容易。<br>偏移指的是x y的偏移;</p>
+<p>转换公式为：<br>实际偏移 &#x3D; (FractionalOffset.x * childWidth, FractionalOffset.y * childHeight)</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Align(</span><br><span class="line">  alignment: FractionalOffset(<span class="number">0.5</span>, <span class="number">1</span>),</span><br><span class="line">  child: FlutterLogo(</span><br><span class="line">    size: <span class="number">60</span>,</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+<img src="/2022/05/29/fe66a5355c28/16538386017539.jpg" class="">
+
+
+
+<p>可以看到，Align和Stack&#x2F;Positioned都可以用于指定子元素相对于父元素的偏移，但它们还是有两个主要区别：</p>
+<p>定位参考系统不同；Stack&#x2F;Positioned定位的的参考系可以是父容器矩形的四个顶点；而Align则需要先通过alignment 参数来确定坐标原点，不同的alignment会对应不同原点，最终的偏移是需要通过alignment的转换公式来计算出。<br>Stack可以有多个子元素，并且子元素可以堆叠，而Align只能有一个子元素，不存在堆叠。</p>
+<h3 id="Center"><a href="#Center" class="headerlink" title="Center"></a>Center</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Center(&#123;</span><br><span class="line">  <span class="built_in">double?</span> widthFactor, </span><br><span class="line">  <span class="built_in">double?</span> heightFactor, </span><br><span class="line">  Widget? child </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到Center继承自Align，它比Align只少了一个alignment 参数；由于Align的构造函数中alignment 值为Alignment.center，所以，我们可以认为Center组件其实是对齐方式确定（Alignment.center）了的Align。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">DecoratedBox(</span><br><span class="line">  decoration: BoxDecoration(color: Colors.red),</span><br><span class="line">  child: Center(</span><br><span class="line">    child: Text(<span class="string">&quot;xxx&quot;</span>),</span><br><span class="line">  ),</span><br><span class="line">),</span><br><span class="line">DecoratedBox(</span><br><span class="line">  decoration: BoxDecoration(color: Colors.red),</span><br><span class="line">  child: Center(</span><br><span class="line">    widthFactor: <span class="number">1</span>,</span><br><span class="line">    heightFactor: <span class="number">1</span>,</span><br><span class="line">    child: Text(<span class="string">&quot;xxx&quot;</span>),</span><br><span class="line">  ),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<img src="/2022/05/29/fe66a5355c28/16538388400806.jpg" class="">
+
+
+<p>两种偏移类Alignment 和FractionalOffset，区别及各自的坐标转化公式</p>
+<p>在需要制定一些精确的偏移时应优先使用FractionalOffset，因为它的坐标原点和布局系统相同，能更容易算出实际偏移。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220528-Flutter-层叠布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/28/68dbbde40c84.html" class="article-date">
+      <time datetime="2022-05-27T16:59:44.000Z" itemprop="datePublished">2022-05-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/28/68dbbde40c84.html">Flutter 层叠布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="层叠布局"><a href="#层叠布局" class="headerlink" title="层叠布局"></a>层叠布局</h1><p>层叠布局和 Web 中的绝对定位布局是相似的，子组件可以根据距父容器四个角的位置来确定自身的位置。层叠布局允许子组件按照代码中声明的顺序堆叠起来。<br>Flutter中使用Stack和Positioned这两个组件来配合实现绝对定位。<br>Stack允许子组件堆叠，而Positioned用于根据Stack的四个角来确定子组件的位置。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Flutter</th>
+<th align="center">SwiftUI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Row</td>
+<td align="center">HStack</td>
+</tr>
+<tr>
+<td align="center">Column</td>
+<td align="center">VStack</td>
+</tr>
+<tr>
+<td align="center">Stack</td>
+<td align="center">ZStack</td>
+</tr>
+</tbody></table>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/28/68dbbde40c84.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-220528-iOS-Lock" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -337,6 +517,211 @@
       
         <p class="article-more-link">
           <a href="/2022/05/27/ab7dd047758f.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220527-Flutter-流式布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/27/f80c8416a26c.html" class="article-date">
+      <time datetime="2022-05-26T16:57:43.000Z" itemprop="datePublished">2022-05-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/27/f80c8416a26c.html">Flutter 流式布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="流式布局"><a href="#流式布局" class="headerlink" title="流式布局"></a>流式布局</h1><h3 id="Wrap"><a href="#Wrap" class="headerlink" title="Wrap"></a>Wrap</h3><p>对于Wrap和Flex（包括Row和Column）除了超出显示范围后Wrap会折行外，其它行为基本相同</p>
+<ul>
+<li>spacing：主轴方向子widget的间距</li>
+<li>runSpacing：纵轴方向的间距</li>
+<li>runAlignment：纵轴方向的对齐方式</li>
+</ul>
+<h3 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h3><p>Flow主要用于一些需要自定义布局策略或性能要求较高(如动画中)的场景</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/27/f80c8416a26c.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220526-Flutter-弹性布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/26/b7fe3f1c9dfb.html" class="article-date">
+      <time datetime="2022-05-25T16:56:09.000Z" itemprop="datePublished">2022-05-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/26/b7fe3f1c9dfb.html">Flutter 弹性布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="弹性布局-Flex"><a href="#弹性布局-Flex" class="headerlink" title="弹性布局 (Flex)"></a>弹性布局 (Flex)</h1><p>弹性布局允许子组件按照一定比例来分配父容器空间, 主要通过Flex和Expanded来配合实现。</p>
+<h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><p>定义, 相比Row、Column多了两个参数, 其实他们都是继承于Flex;</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Flex(&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">required</span> <span class="keyword">this</span>.direction, <span class="comment">// 布局的方向: 水平、垂直方向</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">this</span>.clipBehavior = Clip.none,</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/26/b7fe3f1c9dfb.html#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-220525-Flutter-线性布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/25/19cb93b3048e.html" class="article-date">
+      <time datetime="2022-05-24T16:49:19.000Z" itemprop="datePublished">2022-05-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/25/19cb93b3048e.html">Flutter 线性布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="线性布局-Row、Column"><a href="#线性布局-Row、Column" class="headerlink" title="线性布局 (Row、Column)"></a>线性布局 (Row、Column)</h1><p>Row和Column, 即: 水平方向和垂直方向排列子组件;</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>两个轴向:</p>
+<ul>
+<li>mainAxis: 主轴, 即本组件主体的方向</li>
+<li>crossAxis: 纵轴, 即垂直于主轴的方向</li>
+</ul>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2022/05/25/19cb93b3048e.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -430,10 +815,10 @@
 
 
   
-    <article id="post-220524-Flutter布局约束" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-220524-Flutter-布局约束" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/05/24/75dbaf21f054.html" class="article-date">
+      <a href="/2022/05/24/11406298780d.html" class="article-date">
       <time datetime="2022-05-24T13:18:16.000Z" itemprop="datePublished">2022-05-24</time>
 </a>
 
@@ -449,7 +834,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/24/75dbaf21f054.html">Flutter布局约束</a>
+      <a class="article-title" href="/2022/05/24/11406298780d.html">Flutter 布局约束</a>
     </h1>
   
 
@@ -481,12 +866,12 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Layout/" rel="tag">Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
 
       
         <p class="article-more-link">
-          <a href="/2022/05/24/75dbaf21f054.html#more">more >></a>
+          <a href="/2022/05/24/11406298780d.html#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -640,333 +1025,9 @@
 
 
   
-    <article id="post-190829-MacOS-使用SFMono字体" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/08/29/3504b9da5c42.html" class="article-date">
-      <time datetime="2019-08-29T01:23:52.000Z" itemprop="datePublished">2019-08-29</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/3504b9da5c42.html">macOS 使用SFMono字体</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="从-macOS-中提取-SF-Mono-字体"><a href="#从-macOS-中提取-SF-Mono-字体" class="headerlink" title="从 macOS 中提取 SF Mono 字体"></a>从 macOS 中提取 SF Mono 字体</h3><h6 id="在-终端-中提取-SF-Mono-字体完整路径为："><a href="#在-终端-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 终端 中提取 SF Mono 字体完整路径为："></a>在 终端 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/</code></p>
-<h6 id="在-Xcode-中提取-SF-Mono-字体完整路径为："><a href="#在-Xcode-中提取-SF-Mono-字体完整路径为：" class="headerlink" title="在 Xcode 中提取 SF Mono 字体完整路径为："></a>在 Xcode 中提取 SF Mono 字体完整路径为：</h6><p><code>/Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts</code></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%97%E4%BD%93/" rel="tag">字体</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/08/29/3504b9da5c42.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-190828-go-go-go-2019" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/08/28/6aaf43c133c4.html" class="article-date">
-      <time datetime="2019-08-28T07:57:35.000Z" itemprop="datePublished">2019-08-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/6aaf43c133c4.html">go go go 2019</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <pre><code>有点生疏了
-</code></pre>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-161124-判断字符是否是纯数字" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/24/e13e51eae9f1.html" class="article-date">
-      <time datetime="2016-11-24T01:53:43.000Z" itemprop="datePublished">2016-11-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/24/e13e51eae9f1.html">判断字符是否是纯数字</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用NSScanner类， </span></span><br><span class="line">[<span class="keyword">self</span> isPureInt:text]   <span class="comment">//传入字符串并调用方法判断</span></span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)isPureInt:(<span class="built_in">NSString</span>*)string&#123;</span><br><span class="line">    <span class="built_in">NSScanner</span>* scan = [<span class="built_in">NSScanner</span> scannerWithString:string]; <span class="comment">//定义一个NSScanner，扫描string</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    <span class="keyword">return</span> [scan scanInt:&amp;val] &amp;&amp; [scan isAtEnd];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/11/24/e13e51eae9f1.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-160924-15分钟学会git" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/09/24/c859e4c3dee5.html" class="article-date">
-      <time datetime="2016-09-24T02:17:26.000Z" itemprop="datePublished">2016-09-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/24/c859e4c3dee5.html">15分钟快速学会git</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <ol start="0">
-<li><p>初始化仓库<br> <strong>git init</strong> : 初始化仓库</p>
-</li>
-<li><p>检查状态<br> <strong>git status</strong> : 查看git状态</p>
-</li>
-<li><p>添加文件到缓存区<br> <strong>git add .</strong> : 把文件添加到缓存区</p>
-</li>
-<li><p>Committing<br> <strong>git commit -m “Add file”</strong> : 提交到缓存区</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/09/24/c859e4c3dee5.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-160923-隐藏navigationBar底部的黑线shadowImage" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/09/23/9adbb56f98f1.html" class="article-date">
-      <time datetime="2016-09-23T08:45:49.000Z" itemprop="datePublished">2016-09-23</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/23/9adbb56f98f1.html">隐藏navigationBar底部的黑线shadowImage</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <ol>
-<li><p>直接设置navigationBar的shadowImage和backgroundImage,  需先让translucent属性设置为NO</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="type">void</span>)removeBlackLine &#123;</span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="built_in">UIImage</span> new] forBarPosition:<span class="built_in">UIBarPositionAny</span> barMetrics:<span class="built_in">UIBarMetricsDefault</span>]; </span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setShadowImage:[<span class="built_in">UIImage</span> new]];  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>循环遍历navigationBar的子视图，找到高度小于1的黑线, 在appear是隐藏, disappear时再显示（推荐）
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/09/23/9adbb56f98f1.html#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
     </nav>
   
 </div>
