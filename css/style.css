@@ -420,6 +420,10 @@ a {
     padding: 10px 0;
     margin-left: 0;
   }
+  #container #footer .moe-icp {
+    float: initial;
+    margin-bottom: 1em;
+  }
   #container #footer .footer-left {
     float: initial;
     margin-bottom: 0.5em;
@@ -546,6 +550,10 @@ a {
   }
   #container .tags a {
     line-height: 45px;
+  }
+  #container #comments {
+    margin: 0.625rem 10px !important;
+    padding: 1rem !important;
   }
 }
 .header-author {
@@ -788,6 +796,10 @@ a {
   background: url("/img/V2EX.png") center no-repeat #e4cdb4;
   background-size: 78%;
 }
+#header .header-nav .social .GitHub {
+  background: url("/img/GitHub.png") center no-repeat #fff;
+  background-size: 100%;
+}
 #header .header-nav .social .TiddlyWiki {
   background: url("/img/TiddlyWiki.png") center no-repeat #6283dd;
   background-size: 82%;
@@ -843,11 +855,6 @@ a {
 #header .header-nav .social .Quora {
   background: url("/img/Quora.png") center no-repeat #b92b27;
   background-size: 103%;
-}
-#header .header-nav .social .GitHub {
-  background: url("//cdn.bootcss.com/logos/0.2.0/github-octocat.svg") no-repeat #fff;
-  background-size: 90%;
-  background-position: 50% 100%;
 }
 #header .header-nav .social .CodePen {
   background: url("//cdn.bootcss.com/logos/0.2.0/codepen-icon.svg") no-repeat #000;
@@ -2267,6 +2274,10 @@ pre .javascript .function {
   opacity: 0.75;
   width: 100%;
   text-align: center;
+}
+#footer .moe-icp {
+  float: initial;
+  margin-bottom: 1em;
 }
 #footer .footer-left {
   float: left;
